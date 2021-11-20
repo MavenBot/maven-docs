@@ -223,6 +223,46 @@
     font-size: 16px;
 
             }
+            /* Animation */
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
   </style>
 </head>
   <body>
@@ -435,7 +475,7 @@
                           
                         <div data-v-9f898758="" class="staff-credits">
                                     <a href="scrims.html">
-                          <div data-v-0199d015="" data-v-9f898758="" class="credit zoom">
+                          <div data-v-0199d015="" data-v-9f898758="" class="credit zoom animated animatedFadeInUp fadeInUp">
                              <img src="https://cdn.discordapp.com/attachments/732716742106808382/758726203828994118/gaming.png" style="border-top-left-radius: 10px;border-top-right-radius: 10px;max-width: 200px;height: auto;">                                      <h3 data-v-0199d015="">Scrims</h3> <p data-v-0199d015="" class="job">
                             Description</p> 
                                       <p data-v-0199d015="">
@@ -444,7 +484,7 @@
                                     </a>
                                     
                                     <a href="configs.html">
-                                    <div data-v-0199d015="" data-v-9f898758="" class="credit zoom">
+                                    <div data-v-0199d015="" data-v-9f898758="" class="credit zoom animated animatedFadeInUp fadeInUp">
                          <img src="https://cdn.discordapp.com/attachments/732716742106808382/758726162791792700/clubs.png" style="width: 200px;height: auto;"> 
                           <h3 data-v-0199d015="">Configuration</h3> <p data-v-0199d015="" class="job">Description</p> 
                                                 <p data-v-0199d015="" style="font-weight:956;"><a href="configs.html">Click here</a>
