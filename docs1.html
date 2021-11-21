@@ -583,7 +583,7 @@
                                     <p style="margin-top: 2rem;color: rgba(255, 255, 255, 0.7);" class="text-center text-2xl lg:text-3xl opacity-75 max-w-screen-md mt-8">
 Add Maven to your Discord server today and start verifying your members, and start announcing your scrims professionally!
                                     </p> 
-                                   <a href="https://mavebot.xyz/invite" class="buttona">
+                                   <a href="https://mavenbot.xyz/invite" class="buttona">
     <button3 class="button3" style="margin-right: 0px!important;padding: 16px 64px">Add to Discord</button3>
     </a>
                         </div>
@@ -678,7 +678,7 @@ color: rgb(23, 24, 27)!important;
     
     // Calc current offset and get all animatables
     var offset = $(window).scrollTop() + $(window).height(),
-        $animatables = $('.animatable');
+        $animatables = $('.fade-in-up');
     
     // Unbind scroll handler if we have no animatables
     if ($animatables.length == 0) {
@@ -687,9 +687,9 @@ color: rgb(23, 24, 27)!important;
     
     // Check all animatables and animate them if necessary
 		$animatables.each(function(i) {
-       var $animatable = $(this);
-			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
-        $animatable.removeClass('animatable').addClass('animated');
+       var $fade-in-up = $(this);
+			if (($fade-in-up.offset().top + $fade-in-up.height() - 20) < offset) {
+        $fade-in-up.removeClass('fade-in-up').addClass('fade-in-up');
 			}
     });
 
