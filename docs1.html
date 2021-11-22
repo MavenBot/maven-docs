@@ -309,11 +309,66 @@
 		transform: translateY(0);
 	}
 } */
+	.fadeInsWrap {
+  width: 50%;
+  height: 1000px;
+  margin: 0 auto;
+  border: 1px solid;
+  padding-top: 5%;
+}
+
+.left {
+  border: 1px solid;
+  width: 50%;
+  text-align: center;
+  clear: both;
+}
+
+.right {
+  width: 50%;
+  float: right;
+  border: 1px solid;
+  text-align: center;
+}
+
+.fadeInBlockLeft,
+.fadeInBlockRight {
+  opacity: 0;
+  margin-bottom: 7%;
+}
+
+.animate-inLeft {
+  -webkit-animation: inLeft 600ms ease-in-out forwards;
+  display: block;
+}
+
+@-webkit-keyframes inLeft {
+  0% {
+    -webkit-transform: translateX(900px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+  }
+}
+
+.animate-inRight {
+  -webkit-animation: inRight 600ms ease-in-out forwards;
+  display: block;
+}
+
+@-webkit-keyframes inRight {
+  0% {
+    -webkit-transform: translateX(-900px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+  }
+}
   </style>
 </head>
   <body>
 
- <!-- Header -->
+ <!-- Header scrollanimation animated fadeInLeft adr-3-->
     <header style="background: rgb(23, 24, 27);">
       
         <!-- Navbar -->
@@ -371,7 +426,7 @@
                <div class="sc-1659snh-0 crojIh" style="background: rgb(23, 24, 27);">
       
             <div class="fz1i6o-1 Row hoRgHK">
-                <div class="l5d1ut-1 fMzGxU scrollanimation animated fadeInLeft adr-3">
+                <div class="l5d1ut-1 fMzGxU">
                     <head-docs>Read the Maven Docs</head-docs>
             <doc-yhe>Welcome to the new Maven Docs navigation page! Take a look around, admire, learn, and have fun.</doc-yhe>
             </div>
@@ -516,30 +571,28 @@
                    cursor: default;
                }
               </style>
-              <div data-v-9f898758="" class="section" style="width: 84%; max-width: 980px;">
+              <div data-v-9f898758="" class="section scrollanimation animated fadeInUp adr-1" style="width: 84%; max-width: 980px;">
                           <h2 data-v-9f898758="">Maven Docs</h2>
                           
                         <div data-v-9f898758="" class="staff-credits">
+				<div class="fadeInsWrap">
+
                                     <a href="scrims.html">
-					    <div class="scrollanimation animated fadeInUp adr-1">
                           <div data-v-0199d015="" data-v-9f898758="" class="credit zoom">
                              <img src="https://cdn.discordapp.com/attachments/732716742106808382/758726203828994118/gaming.png" style="border-top-left-radius: 10px;border-top-right-radius: 10px;max-width: 200px;height: auto;">                                      <h3 data-v-0199d015="">Scrims</h3> <p data-v-0199d015="" class="job">
                             Description</p> 
                                       <p data-v-0199d015="">
                                                   <a href="scrims.html" style="font-weight:956;">Click here</a></p>
                           </div> 
-					    </div>
                                     </a>
                                     
                                     <a href="configs.html">
-					<div class="scrollanimation animated fadeInUp adr-1">
-                                    <div data-v-0199d015="" data-v-9f898758="" class="credit zoom">
+                                    <div data-v-0199d015="" data-v-9f898758="" class="credit zoom fadeInBlockLeft left">
                          <img src="https://cdn.discordapp.com/attachments/732716742106808382/758726162791792700/clubs.png" style="width: 200px;height: auto;"> 
                           <h3 data-v-0199d015="">Configuration</h3> <p data-v-0199d015="" class="job">Description</p> 
                                                 <p data-v-0199d015="" style="font-weight:956;"><a href="configs.html">Click here</a>
                                                 </p>
                                              </div> 
-						</div>
                                                        </a>
                                     
                                   <a href="manage.html">
@@ -568,6 +621,7 @@
                                     <p data-v-0199d015="" style="font-weight:956;"><a href="modmail.html">Comming Soon!</a></p>
                                     </div> 
                                    </div>
+					 </div>
               </div>
                                      
              <div class="sc-1659snh-0 crojIh">
@@ -678,35 +732,30 @@ color: rgb(23, 24, 27)!important;
         </div>
   </div>
                                     <script>
-  jQuery(function($) {
-  
-  // Function which adds the 'animated' class to any '.animatable' in view
-  var doAnimations = function() {
+$(document).ready(function(){
+   
+    $(window).scroll( function(){
     
-    // Calc current offset and get all animatables
-    var offset = $(window).scrollTop() + $(window).height(),
-        $animatables = $('.fade-in-up');
+       $(".fadeInBlockLeft, .fadeInBlockRight").each( function(i){
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
     
-    // Unbind scroll handler if we have no animatables
-    if ($animatables.length == 0) {
-      $(window).off('scroll', doAnimations);
-    }
-    
-    // Check all animatables and animate them if necessary
-		$animatables.each(function(i) {
-       var $fade-in-up = $(this);
-			if (($fade-in-up.offset().top + $fade-in-up.height() - 20) < offset) {
-        $fade-in-up.removeClass('fade-in-up').addClass('fade-in-up');
-			}
-    });
-
-	};
-  
-  // Hook doAnimations on scroll, and trigger a scroll
-	$(window).on('scroll', doAnimations);
-  $(window).trigger('scroll');
-
-});
+            bottom_of_window = bottom_of_window + 50;  
+          
+            if( bottom_of_window > bottom_of_object ){
+               
+                $(this).animate({'opacity':'1'},1000);
+                if($(this).hasClass('fadeInBlockLeft')){
+                	$(this).addClass("animate-inLeft");
+                }
+                if($(this).hasClass('fadeInBlockRight')){
+                	$(this).addClass("animate-inRight");
+                }
+            }
+         }); 
+       });
+     });
             </script>    
              <!-- END OF PAGE -->
         <!-- ==============================================
