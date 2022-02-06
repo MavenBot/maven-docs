@@ -259,141 +259,75 @@
 
             }
             
-            /* Animation 
-
-.animatable {
-  
-  /* initially hide animatable objects 
-  visibility: hidden;
-  
-  /* initially pause animatable objects their animations 
-  -webkit-animation-play-state: paused;   
-  -moz-animation-play-state: paused;     
-  -ms-animation-play-state: paused;
-  -o-animation-play-state: paused;   
-  animation-play-state: paused; 
-}
-
-/* show objects being animated 
-.animated {
-  visibility: visible;
-  
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-
-  -webkit-animation-play-state: running;
-  -moz-animation-play-state: running;
-  -ms-animation-play-state: running;
-  -o-animation-play-state: running;
-  animation-play-state: running;
-}
-            @-webkit-keyframes fadeInUp {
-	0% {
-		opacity: 0;
-		-webkit-transform: translateY(20px);
-	}	100% {
-		opacity: 1;
-		-webkit-transform: translateY(0);
-	}
-}
-
-@-moz-keyframes fadeInUp {
-	0% {
-		opacity: 0;
-		-moz-transform: translateY(20px);
-	}
-
-	100% {
-		opacity: 1;
-		-moz-transform: translateY(0);
-	}
-}
-
-@-o-keyframes fadeInUp {
-	0% {
-		opacity: 0;
-		-o-transform: translateY(20px);
-	}
-
-	100% {
-		opacity: 1;
-		-o-transform: translateY(0);
-	}
-}
-
-@keyframes fadeInUp {
-	0% {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-} */
-	.fadeInsWrap {
-  width: 50%;
-  height: 1000px;
-  margin: 0 auto;
-  border: 1px solid;
-  padding-top: 5%;
-}
-
-.left {
-  border: 1px solid;
-  width: 50%;
-  text-align: center;
-  clear: both;
-}
-
-.right {
-  width: 50%;
-  float: right;
-  border: 1px solid;
-  text-align: center;
-}
-
-.fadeInBlockLeft,
-.fadeInBlockRight {
+     .js-scroll {
   opacity: 0;
-  margin-bottom: 7%;
+  transition: opacity 500ms;
 }
 
-.animate-inLeft {
-  -webkit-animation: inLeft 600ms ease-in-out forwards;
-  display: block;
+.js-scroll.scrolled {
+  opacity: 1;
 }
 
-@-webkit-keyframes inLeft {
+.scrolled.fade-in {
+  animation: fade-in 1s ease-in-out both;
+}
+
+.scrolled.fade-in-bottom {
+  animation: fade-in-bottom 1s ease-in-out both;
+}
+
+.scrolled.slide-left {
+  animation: slide-in-left 1s ease-in-out both;
+}
+
+.scrolled.slide-right {
+  animation: slide-in-right 1s ease-in-out both;
+}
+@keyframes slide-in-left {
   0% {
-    -webkit-transform: translateX(900px);
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0px);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
-.animate-inRight {
-  -webkit-animation: inRight 600ms ease-in-out forwards;
-  display: block;
-}
-
-@-webkit-keyframes inRight {
+@keyframes slide-in-right {
   0% {
-    -webkit-transform: translateX(-900px);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0px);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
   </style>
@@ -458,11 +392,14 @@
                <div class="sc-1659snh-0 crojIh" style="background: rgb(23, 24, 27);">
       
             <div class="fz1i6o-1 Row hoRgHK">
-                <div class="l5d1ut-1 fMzGxU scrollanimation animated fadeInLeft">
+		    			 <div class="scroll-element js-scroll fade-in-bottom">
+
+                <div class="l5d1ut-1 fMzGxU">
                     <head-docs>Read the Maven Docs</head-docs>
             <doc-yhe>Welcome to the new Maven Docs navigation page! Take a look around, admire, learn, and have fun.</doc-yhe>
             </div>
                            </div>
+		       </div>
               </div>
               <!-- Waves -->
               <div class="sc-1659snh-0 eSjOZD">
@@ -605,54 +542,63 @@
                    cursor: default;
                }
               </style>
-              <div data-v-9f898758="" class="section scrollanimation animated fadeInUp adr-1" style="width: 84%; max-width: 980px;">
+              <div data-v-9f898758="" class="section adr-1" style="width: 84%; max-width: 980px;">
+		      			 <div class="scroll-element js-scroll fade-in-bottom">
                           <h2 data-v-9f898758="">Maven Docs</h2>
-                          
+		      </div>
                         <div data-v-9f898758="" class="staff-credits">
-
+			 <div class="scroll-element js-scroll fade-in-bottom">
                                     <a href="scrims.html">
                           <div data-v-0199d015="" data-v-9f898758="" class="credit zoom">
-                             <img src="https://cdn.discordapp.com/attachments/712004527351660615/939632034559701042/IMG_2382.png" style="border-top-left-radius: 10px;border-top-right-radius: 10px;max-width: 200px;height: auto;">                                      
+                             <img src="https://cdn.discordapp.com/attachments/712004527351660615/939632034559701042/IMG_2382.png" style="border-top-left-radius: 10px;border-top-right-radius: 10px;max-width: 200px;margin-top: 10px;height: auto;">                                      
 				  <h3 data-v-0199d015="">Scrims</h3> <p data-v-0199d015="" class="job">Keep your Scrim announcements clean and professional thanks to a high-quality, customizable fortnite scrim system!</p> 
                                       <p data-v-0199d015=""><a href="scrims.html" style="font-weight:956;">Click here</a></p>
                           </div> 
                                     </a>
+				</div>
                                     
+							 <div class="scroll-element js-scroll fade-in-bottom">
                                     <a href="configs.html">
                                     <div data-v-0199d015="" data-v-9f898758="" class="credit zoom">
-                         <img src="https://cdn.discordapp.com/attachments/712004527351660615/939699870770556958/IMG_2395.png" style="width: 200px;height: auto;"> 
+                         <img src="https://cdn.discordapp.com/attachments/712004527351660615/939699870770556958/IMG_2395.png" style="width: 200px;margin-top: 10px;height: auto;"> 
                           <h3 data-v-0199d015="">Configuration</h3> <p data-v-0199d015="" class="job">Make your scrim announcements better looking the the Customizable features on Maven!</p> 
                                                 <p data-v-0199d015="" style="font-weight:956;"><a href="configs.html">Click here</a>
                                                 </p>
                                              </div> 
-                                                       </a>
+								 </a></div>
                                     
+							 <div class="scroll-element js-scroll fade-in-bottom">
                                   <a href="manage.html">
                                     <div data-v-0199d015="" data-v-9f898758="" class="credit zoom">
-                                                            <img src="https://cdn.discordapp.com/attachments/712004527351660615/939632037004992512/IMG_2392.png" style="width: 200px;height: auto;"> 
+                                                            <img src="https://cdn.discordapp.com/attachments/712004527351660615/939632037004992512/IMG_2392.png" style="width: 200px;margin-top: 10px;height: auto;"> 
                                                 <h3 data-v-0199d015="">Management</h3> 
                                                             <p data-v-0199d015="" class="job">Use our tracker to track you or your friend's fortnite stats, unlink accounts, and much more with Management features on Maven!</p> 
                                                                         <p data-v-0199d015="" style="font-weight:956;"><a href="manage.html">Click here</a>
                                                 </p>
                                           </div> 
                                     </a>
+				</div>
                                     
+							 <div class="scroll-element js-scroll fade-in-bottom">
                                  <a href="admin.html">
                                     <div data-v-0199d015="" data-v-9f898758="" class="credit zoom">
-                                                <img src="https://cdn.discordapp.com/attachments/712004527351660615/939632036140961812/IMG_2387.png" style="width: 200px;height: auto;"> 
+                                                <img src="https://cdn.discordapp.com/attachments/712004527351660615/939632036140961812/IMG_2387.png" style="width: 200px;margin-top: 10px;height: auto;"> 
                                                 <h3 data-v-0199d015="">Administration</h3> 
                                                 <p data-v-0199d015="" class="job">Maven allows server Administrators to use super secret and important commands!</p> 
                                     <p data-v-0199d015="" style="font-weight:956;"><a href="admin.html">Click here</a></p>
                                     </div> 
+					 </div>
                                     
+								 			 <div class="scroll-element js-scroll fade-in-bottom">
                                 <a href="modmail.html">
                                     <div data-v-0199d015="" data-v-9f898758="" class="credit zoom">
-                                                <img src="https://cdn.discordapp.com/attachments/712004527351660615/939699536937492602/IMG_2394.png" style="width: 200px;height: auto;"> 
+                                                <img src="https://cdn.discordapp.com/attachments/712004527351660615/939699536937492602/IMG_2394.png" style="width: 200px;margin-top: 10px;height: auto;"> 
                                                 <h3 data-v-0199d015="">Modmail</h3> 
                                                 <p data-v-0199d015="" class="job">Coming soon!</p> 
                                     <p data-v-0199d015="" style="font-weight:956;"><a href="modmail.html">Comming Soon!</a></p>
                                     </div> 
 					 </div>
+								 </div>
               </div>
                                      
              <div class="sc-1659snh-0 crojIh">
@@ -724,38 +670,203 @@ color: rgb(23, 24, 27)!important;
                                       border-radius: 28px;
     text-align: center!important;
                           }
+                          .menu-header {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.6);
+    align-items: center;
+    display: flex;
+    margin-bottom: .5rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row nowrap;
+    }
+		      header-menu-h3 {
+                                                font: 900 1.5em 'Poppins', Helvetica, arial, sans-serif;
+                                      color: white;
+                                      margin-left: .5rem;
+                                      }
                           
+                .flex11 {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+}
+                          .nav-head buttonNav {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    height: 24px;
+    color: white;
+    cursor: pointer;
+}
+                          .nav-links {
+    max-height: calc(100vh - 154px);
+    overflow-y: auto;
+}
+                          buttonNav {
+    background: none;
+    border: none;
+    /* font-size: 20px; */
+    font-weight: 100;
+    font-size: x-large;
+    /* font-style: unset; */
+                          }                          
+buttonNav {
+    /* width: 24px; */
+    background-color: rgb(23, 24, 27)!important;
+    /* height: 24px; */
+    color: rgb(255, 255, 255);
+
+}
+                          .menu-main {
+                         
+    max-height: calc(100vh - 154px);
+    overflow-y: auto;
+
+                          }
+                          
+                          .menu-main a {
+    display: block;
+    padding: .75rem;
+    border-radius: 5px;
+    color: white;
+    -webkit-transition: color .1s,background-color .1s,font-weight .1s;
+    transition: color .1s,background-color .1s,font-weight .1s;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}
+                 .menu-main a:hover {
+    background-color: rgb(36, 37, 42)!important;
+    font-weight: 500;
+    color: white;
+}         
+                          .sep {
+    height: 1px;
+    background-color: rgb(255, 255, 255, 0.6);
+    margin: .5rem 0;
+}
+                          .discovery {
+                          color: white;
+                          }
+                          .socials {
+                            color: white;
+                            text-align: center;
+                          }
+                          .socials a:hover {
+                                    background-color: rgb(36, 37, 42)!important;
+                                    font-weight: 500;
+                                    color: #2585FF;
+                          }       
+                          .socials a {
+                        display: inline-block;
+                                   }
+                          .menu-footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    display: -webkit-box;
+    display: flex;
+    width: 330px;
+}
+                          .menu-footer .buttonNav {
+    margin: 6px 8px;
+    padding: 12px 22px;
+    border-radius: 5px;
+    background-color: #2a2a2f;
+    color: rgba(240,240,255,.8);
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none!important;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+}
+                          .menu-footer .buttonNav {
+    -webkit-box-flex: 1;
+    flex: auto 1 1;
+    text-align: center;
+    font-weight: 700;
+}
+         .buttonNav.new-style {
+    padding: 1rem 2rem;
+    border-radius: 99px;
+    color: #fff;
+}
+          .buttonNav.default {
+    background-color: #2585FF;
+    color: white;
+}              
                 
               </style>
-              
-                  <i class="newr" data-dismiss="modal">
-<svg class="closeIcon-2dbyjK" data-dismiss="modal" width="12" height="12" viewBox="0 0 12 12">
-                      <g fill="none" fill-rule="evenodd" aria-hidden="true">
-                      <path d="M0 0h12v12H0">
-                      </path>
-                      <path fill="currentColor" d="M9.5 3.205L8.795 2.5 6 5.295 3.205 2.5l-.705.705L5.295 6 2.5 8.795l.705.705L6 6.705 8.795 9.5l.705-.705L6.705 6"></path>
-                      </g>
-                    </svg>
-                    <!--<i class="fas fa-times" data-dismiss="modal"></i> -->
-                  </i>
-              <div class="spacer-1"></div>
-                <div class="menu modal-body">
-                  <nav>
-                  <a class="link-1bIkeG link-3XMvoR" href="https://mavenbot.xyz/">
-                    <span class="text-3U-SDd textSmall-2bq_Bu slideText">Home</span></a>
-                  <a class="link-1bIkeG link-3XMvoR spacingLike" href="https://docs.mavenbot.xyz/scrims"><span class="text-3U-SDd textSmall-2bq_Bu slideText">Scrims</span></a>
-                  <a class="link-1bIkeG link-3XMvoR spacingLike" href="https://docs.mavenbot.xyz/configs"><span class="text-3U-SDd textSmall-2bq_Bu slideText">Configure</span></a>
-                  <a class="link-1bIkeG link-3XMvoR spacingLike" href="https://docs.mavenbot.xyz/manage"><span class="text-3U-SDd textSmall-2bq_Bu slideText">Management</span></a>
-                  <a class="link-1bIkeG link-3XMvoR spacingLike" href="https://docs.mavenbot.xyz/admin"><span class="text-3U-SDd textSmall-2bq_Bu slideText">Admin</span></a>
-                  <a class="link-1bIkeG link-3XMvoR spacingLike" href="https://docs.mavenbot.xyz/modmail"><span class="text-3U-SDd textSmall-2bq_Bu slideText">Modmail</span></a>
-                  <a class="link-1bIkeG link-3XMvoR spacingLike linkActive-LhgXW1" href="https://docs.mavenbot.xyz/"><span class="text-3U-SDd textSmall-2bq_Bu slideText homeText">Docs</span></a>
-                  <a class="link-1bIkeG link-3XMvoR spacingLike" href="https://discord.com/invite/QF6e769AGv"><span style="margin-bottom: 13px;" class="text-3U-SDd textSmall-2bq_Bu slideText">Support Server</span></a>
-                  <div class="link-1bIkeG link-3XMvoR loginButton"><span class="text-3U-SDd textSmall-2bq_Bu slideText"><i class="fas fa-sign-in-alt styleIcon"></i>Login</span></div>
-
-                    <div class="row w-100">
-                        <div class="items p-0 col-12 text-center">
-                            <!-- Append [navbar] -->
-                          </nav>
+              <div class="menu-header">
+                                          <div class="flex11">
+                      <span data-v-131e8161="" aria-hidden="true" aria-label="Compass" role="img" class="theIcon">
+                                  <i width="42" height="42" viewBox="0 0 24 24" class="fas fa-compass discovery material-design-icon__svg" style="font-size: 42px;"></i>
+                              </span>
+                              <header-menu-h3>Maven</header-menu-h3>
+                              </div>
+                              <div style="flex: 1 1 auto;"></div>
+                                          <buttonNav data-dismiss="modal">
+                                                      <span data-dismiss="modal" aria-label="Close menu" role="img" class="theIcon1">
+                                                                  <svg data-dismiss="modal" fill="currentColor" width="24" height="24" viewBox="0 0 24 24" class="material-design-icon__svg">
+                                                                              <path data-dismiss="modal" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z">
+                                                                 <title data-v-0ef2dcc0="">Close menu</title>
+                                                                                          </path></svg>
+                                                      </span>
+                                          </buttonNav>
+                              </div>
+                        <div class="menu-main">
+                        <a href="https://mavenbot.xyz/" class="nuxt-link-active">Home</a>
+                        <a href="https://mavenbot.xyz/support" class="nuxt-link-active">Support</a>
+                        <a href="https://docs.mavenbot.xyz/scrims" class="nuxt-link-active">Scrims</a>
+                        <div class="sep"></div>
+                        <a href="https://docs.mavenbot.xyz/configs" class="nuxt-link-active">Configs</a>
+                        <a href="https://docs.mavenbot.xyz/manage" class="nuxt-link-active">Management</a>
+                        <a href="https://docs.mavenbot.xyz/admin" class="nuxt-link-active">Admin</a>
+                        <a href="https://docs.mavenbot.xyz/" class="nuxt-link-active">Modmail</a>
+                        <div class="sep"></div>
+                        <a href="https://docs.mavenbot.xyz/" class="nuxt-link-active">View Commands</a>
+                        <a href="https://mavenbot.xyz/status" class="nuxt-link-active">Bot Status</a>
+                        <div class="sep"></div>
+                          
+                                    <div class="socials">
+                                    <a href="https://twitter.com/DiscordMaxx" target="_blank" title="Twitter account">
+                                                <span data-v-0ef2dcc0="" aria-label="Twitter icon" role="img" class="material-design-icon twitter-icon">
+                                                                      <i width="20" height="20" viewBox="0 0 24 24" class="fab fa-twitter material-design-icon__svg"></i>
+                                                            </span></a>
+                                       
+                                                <a href="https://twitch.tv/DiscordMax" target="_blank" title="Twitch account">
+                                                            <span data-v-0ef2dcc0="" aria-label="Twitch icon" role="img" class="material-design-icon twitch-icon">
+                                                                   <i width="20" height="20" viewBox="0 0 24 24" class="fab fa-twitch material-design-icon__svg"></i>
+                                                                                    </span></a>
+                                                
+                                                <a data-v-0ef2dcc0="" href="https://mavenbot.xyz/support" target="_blank" title="Discord server">
+                                                            <span aria-label="Discord icon" role="img" class="material-design-icon discord-icon">
+                                                                                    <i width="20" height="20" viewBox="0 0 24 24" class="fab fa-discord material-design-icon__svg"></i>
+                                                                                 </span></a>
+                                                
+                                                <a data-v-0ef2dcc0="" href="https://github.com/MavenBot" target="_blank" title="GitHub organization">
+                                                            <span data-v-0ef2dcc0="" aria-label="Github Circle icon" role="img" class="material-design-icon github-circle-icon">
+                                                                               <i width="20" height="20" viewBox="0 0 24 24" class="fab fa-github material-design-icon__svg"></i>
+                                                                                    </span></a>
+                                                
+                                                <a data-v-0ef2dcc0="" href="https://mavenbot.xyz/invite" target="_blank" title="Invite Bot">
+                                                            <span aria-label="Invite Bot icon" role="img" class="material-design-icon discord-icon">
+                                                                                    <i width="20" height="20" viewBox="0 0 24 24" class="fas fa-robot material-design-icon__svg"></i>
+                                                                                 </span></a>
+                                    </div>
+                        </div>
+		 </nav>
                         </div>
                     </div>
                 </div>
@@ -763,30 +874,46 @@ color: rgb(23, 24, 27)!important;
         </div>
   </div>
                                     <script>
-$(document).ready(function(){
-   
-    $(window).scroll( function(){
-    
-       $(".fadeInBlockLeft, .fadeInBlockRight").each( function(i){
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-    
-            bottom_of_window = bottom_of_window + 50;  
-          
-            if( bottom_of_window > bottom_of_object ){
-               
-                $(this).animate({'opacity':'1'},1000);
-                if($(this).hasClass('fadeInBlockLeft')){
-                	$(this).addClass("animate-inLeft");
-                }
-                if($(this).hasClass('fadeInBlockRight')){
-                	$(this).addClass("animate-inRight");
-                }
-            }
-         }); 
-       });
-     });
+const scrollElements = document.querySelectorAll(".js-scroll");
+
+const elementInView = (el, dividend = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / dividend
+  );
+};
+
+const elementOutofView = (el) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+const displayScrollElement = (element) => {
+  element.classList.add("scrolled");
+};
+
+const hideScrollElement = (element) => {
+  element.classList.remove("scrolled");
+};
+
+const handleScrollAnimation = () => {
+  scrollElements.forEach((el) => {
+    if (elementInView(el, 1.25)) {
+      displayScrollElement(el);
+    } else if (elementOutofView(el)) {
+      hideScrollElement(el)
+    }
+  })
+}
+
+window.addEventListener("scroll", () => { 
+  handleScrollAnimation();
+});
             </script>    
              <!-- END OF PAGE -->
         <!-- ==============================================
