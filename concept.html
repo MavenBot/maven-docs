@@ -399,6 +399,14 @@
     	font-weight: 500;
 	border-radius: 15px;
 	text-align: right;
+	-webkit-transition-property: background-color, color, -webkit-box-shadow;
+        transition-property: background-color, color, -webkit-box-shadow;
+    	transition-property: background-color, color, box-shadow;
+    	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+    	-webkit-transition-duration: .2s;
+   	transition-duration: .2s;
+    	transition-timing-function: ease-in-out;
+    	transition-timing-function: ease-in-out;	
 	}
 	.buttonPrev {
 	color: white!important;
@@ -428,10 +436,10 @@
 	.p24 {
 	color: rgba(255, 255, 255, 0.5)!important;
 	}
-	.buttonPrev .p24:hover {
+	.buttonPrev:hover .p24:hover {
 	color: rgba(255, 255, 255)!important;
 	}
-	.buttonNext .p24:hover {
+	.buttonNext:hover .p24:hover {
 	color: rgba(255, 255, 255)!important;
 	}
   </style>
@@ -513,7 +521,7 @@
 				  <img alt="Music Commands" srcset="https://cdn.discordapp.com/attachments/712004527351660615/939699870770556958/IMG_2395.png 1x, https://cdn.discordapp.com/attachments/712004527351660615/939699870770556958/IMG_2395.png 2x" src="https://cdn.discordapp.com/attachments/712004527351660615/939699870770556958/IMG_2395.png" decoding="async" data-nimg="intrinsic" class="" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
 				  <noscript></noscript></span></div></div></div></div></div></div>
 	  <div class="bottomSwitch">
-		  <div class="buttonPrev"><p>Previous</p><i class="fas fa-arrow-left" style="display: flex;align-items: center;"><p class="p24" style="margin-left: 10px;">Management</p></i></div>
+		  <div class="buttonPrev"><p>Previous</p><i class="fas fa-arrow-left p24" style="display: flex;align-items: center;"><p class="p24" style="margin-left: 10px;">Management</p></i></div>
 		  <div class="buttonNext"><p>Next</p><p class="p24">Configuration<i class="fas fa-arrow-right" style="margin-left: 10px;"></i><p></div>
 	  </div>
    <style>
@@ -811,10 +819,18 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
   transform: scale(1.1)!important; /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
-               a:hover {
-                   color: rgba(255, 255, 255);
-                   cursor: default;
-               }
+               	   a:hover {
+                   	color: rgba(255, 255, 255);
+                   	cursor: default;
+		   	-webkit-transition-property: background-color, color, -webkit-box-shadow;
+        		transition-property: background-color, color, -webkit-box-shadow;
+    			transition-property: background-color, color, box-shadow;
+    			transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+    			-webkit-transition-duration: .2s;
+   			transition-duration: .2s;
+    			transition-timing-function: ease-in-out;
+    			transition-timing-function: ease-in-out;
+               	   }
 	   .left {
   border: 1px solid;
   width: 50%;
