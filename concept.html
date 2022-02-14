@@ -438,9 +438,28 @@
 	}
 	.buttonPrev:hover .p24 {
 	color: rgba(255, 255, 255)!important;
+	-webkit-transition-property: background-color, color, -webkit-box-shadow;
+        transition-property: background-color, color, -webkit-box-shadow;
+    	transition-property: background-color, color, box-shadow;
+    	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+    	-webkit-transition-duration: .2s;
+   	transition-duration: .2s;
+    	transition-timing-function: ease-in-out;
+    	transition-timing-function: ease-in-out;	
 	}
 	.buttonNext:hover .p24 {
 	color: rgba(255, 255, 255)!important;
+	-webkit-transition-property: background-color, color, -webkit-box-shadow;
+        transition-property: background-color, color, -webkit-box-shadow;
+    	transition-property: background-color, color, box-shadow;
+    	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+    	-webkit-transition-duration: .2s;
+   	transition-duration: .2s;
+    	transition-timing-function: ease-in-out;
+    	transition-timing-function: ease-in-out;	
+	}
+	.familyF {
+	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
 	}
   </style>
 </head>
@@ -521,7 +540,7 @@
 				  <img alt="Music Commands" srcset="https://cdn.discordapp.com/attachments/712004527351660615/939699870770556958/IMG_2395.png 1x, https://cdn.discordapp.com/attachments/712004527351660615/939699870770556958/IMG_2395.png 2x" src="https://cdn.discordapp.com/attachments/712004527351660615/939699870770556958/IMG_2395.png" decoding="async" data-nimg="intrinsic" class="" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border: none; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;">
 				  <noscript></noscript></span></div></div></div></div></div></div>
 	  <div class="bottomSwitch">
-		  <div class="buttonPrev"><p>Previous</p><i class="fas fa-arrow-left p24" style="display: flex;align-items: center;"><p class="p24" style="margin-left: 10px;font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-weight:500">Management</p></i></div>
+		  <div class="buttonPrev"><p>Previous</p><i class="fas fa-arrow-left p24" style="display: flex;align-items: center;"><p class="p24 familyF" style="margin-left: 10px;font-weight:500">Management</p></i></div>
 		  <div class="buttonNext"><p>Next</p><p class="p24">Configuration<i class="fas fa-arrow-right" style="margin-left: 10px;"></i><p></div>
 	  </div>
    <style>
