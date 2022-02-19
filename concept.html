@@ -144,13 +144,17 @@
 @keyframes slide2 {
   0%,
   100% {
-    transform: translate(0, 0);
+    transform: translate(10px, 0);
   }
 
   50% {
-    transform: translate(10px, 10px);
+    transform: translate(0px, 10px);
   }
-}	.arrow1 {
+}	
+	body {
+    overflow-x: initial!important;
+	}
+	.arrow1 {
 		animation: slide1 1s ease-in-out infinite;
 	}
 	.arrow2 {
