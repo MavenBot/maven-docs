@@ -416,24 +416,60 @@
     border-radius: 4px;
 }	
 .subTabPageNavigation_navLstItem__32vGa	{
-	margin: 0 26px;
-    padding: 4px 0;
+    color: transparent;
+    margin: 0 26px;
+    padding: 4px 35px;
     transition: .2s ease;
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
     position: relative;
-	}
+}
+.subbTabPageNavigation_navLstItem--active__1zDRZ:before {
+    background-color: #2585FF;
+}
+.subbTabPageNavigation_navLstItem__32vGa:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    border-radius: 4px;
+}	
+.subbTabPageNavigation_navLstItem__32vGa	{
+    color: transparent;
+    margin: 0 26px;
+    padding: 4px 35px;
+    transition: .2s ease;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    position: relative;
+}
 .typo_heading_12 {
     font-weight: 700;
     font-size: 20px;
 }
 .subCat {
-    color: white;
+    color: rgba(255, 255, 255);
+    text-align: right;
     font-weight: 500;
     display: flex;
     font-size: 14px;
     justify-content: space-evenly;
-}	
+    flex-wrap: nowrap;
+}
+.subbCat {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: right;
+    font-weight: 500;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+.subbCat:hover {
+    color: rgba(255, 255, 255);
+}		
 .typo_heading_12 {
     font-family: Poppins,sans-serif;
     font-size: 16px;
@@ -584,8 +620,8 @@
 		       <li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/quickstart">Quickstart</a></li>
 		       <li class="tabPageNavigation_navLstItem__32vGa tabPageNavigation_navLstItem--active__1zDRZ"><a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/scrims">Scrims</a></li>
-		       <li class="subTabPageNavigation_navLstItem__32vGa subTabPageNavigation_navLstItem--active__1zDRZ"><a class="subCat" target="_self" id="" href="/scrims">Active Sub Cat</a></li>
-		       <a class="subCat" target="_self" id="" href="/scrims">Not Active Sub Cat</a>
+		       <li class="subTabPageNavigation_navLstItem__32vGa subTabPageNavigation_navLstItem--active__1zDRZ"><a class="subCat" target="_self" id="" href="/scrims">Starting Scrims</a></li>
+		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" id="" href="/scrims">Game Started</a></li>
 		       <li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/config">Configuration</a></li><li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/manage">Management</a></li><li class="tabPageNavigation_navLstItem__32vGa">
