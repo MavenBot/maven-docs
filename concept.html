@@ -556,12 +556,35 @@
 	}
 	.CommandHeader {
 	color: white;
+	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
 	}
-	.CommandLink:hover {
+	.CommandHeader:hover>.CommandLink {
 	opacity: 1;
+		-webkit-transition-property: background-color, color, -webkit-box-shadow;
+        transition-property: background-color, color, -webkit-box-shadow;
+    	transition-property: background-color, color, box-shadow;
+    	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+    	-webkit-transition-duration: .2s;
+   	transition-duration: .2s;
+    	transition-timing-function: ease-in-out;
+    	transition-timing-function: ease-in-out;
+	animation: slide1 .8s ease-in-out 2;	
 	}
 	.CommandLink {
 	opacity: 0;
+	color: #3578e5!important;
+	text-decoration: underline;	
+	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;	
+	-webkit-transition-property: background-color, color, -webkit-box-shadow;
+        transition-property: background-color, color, -webkit-box-shadow;
+    	transition-property: background-color, color, box-shadow;
+    	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
+    	-webkit-transition-duration: .2s;
+   	transition-duration: .2s;
+    	transition-timing-function: ease-in-out;
+    	transition-timing-function: ease-in-out;
+	animation: slide1 .8s ease-in-out 2;	
+	
 	}
   </style>
 </head>
@@ -651,8 +674,8 @@
 			  			</div>
 		  			</div>
 		  		</div>
+		  		  <h1 class="CommandHeader">Start <a class="CommandLink" id="#start" title="Direct link to heading">#</a></h1>
 			</div>
-		  <h1 class="CommandHeader">Start <a class="CommandLink" id="#start" title="Direct link to heading">#</a></h1>
 	  	</div>
 	  </div>
 	  <div class="bottomSwitch">
