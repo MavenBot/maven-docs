@@ -363,6 +363,7 @@
 
 .tabPageNavigation_tbPageNavCntntWapr__307yn {
     display: -webkit-flex;
+    cursor: pointer;	
     display: flex;
 }
 	
@@ -418,6 +419,7 @@
 .subTabPageNavigation_navLstItem__32vGa	{
     color: transparent;
     margin: 0 26px;
+    cursor: pointer;
     padding: 4px 35px;
     transition: .2s ease;
     -webkit-flex-shrink: 0;
@@ -460,6 +462,7 @@
 .subbCat {
     color: rgba(255, 255, 255, 0.5);
     font-weight: 500;
+    cursor: pointer;	
     margin-left: 10px;	
     font-size: 14px;
     justify-content: space-evenly;
@@ -555,12 +558,13 @@
 	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
 	}
 	.CommandHeader {
-	color: white;
+	color: rgba(255, 255, 255)!important;
 	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
 	}
 	.CommandHeader:hover>.CommandLink {
 	opacity: 1;
-		-webkit-transition-property: background-color, color, -webkit-box-shadow;
+	cursor: pointer;	
+	-webkit-transition-property: background-color, color, -webkit-box-shadow;
         transition-property: background-color, color, -webkit-box-shadow;
     	transition-property: background-color, color, box-shadow;
     	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
@@ -570,10 +574,12 @@
     	transition-timing-function: ease-in-out;
 	animation: slide1 .8s ease-in-out 2;	
 	}
+	.CommandLink:hover {
+	text-decoration: underline;	
+	}
 	.CommandLink {
 	opacity: 0;
 	color: #3578e5!important;
-	text-decoration: underline;	
 	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;	
 	-webkit-transition-property: background-color, color, -webkit-box-shadow;
         transition-property: background-color, color, -webkit-box-shadow;
