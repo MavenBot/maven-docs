@@ -578,25 +578,70 @@
 	animation: slide1 .8s ease-in-out 2;	
 	}
 	
-	.familyF {
+        .familyF {
 	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
 	}
+	
 	.CommandHeader {
 	color: rgba(255, 255, 255)!important;
+        text-transform: none;
+	margin-bottom: 1rem;
+	margin-left: 15px;	
+        font-weight: bold;            
 	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
-	}
-	.CommandHeader:hover>.CommandLink {
+        }
+	@media (max-width: 771px) {
+			    .CommandHeader {
+			        font-size: 3rem; 
+			    }
+		   }
+	@media (max-width: 771px) {
+			    .Command2Header {
+			        font-size: 2.5rem!important; 
+			    }
+		   }
+	@media (max-width: 771px) {
+			    .Command3Header {
+			        font-size: 2.2rem!important;
+				font-weight: 600!important;    				    
+			    }
+		   }	
+	@media (max-width: 530px) {
+			    .CommandHeader {
+			        font-size: 2rem; 
+			    }
+		   }
+	@media (max-width: 530px) {
+			    .Command2Header {
+			        font-size: 1.5rem!important; 
+			    }
+		   }
+	@media (max-width: 530px) {
+			    .Command3Header {
+			        font-size: 1.3rem!important;
+				font-weight: 600!important;    				    
+			    }
+		   }	
+	@media (max-width: 390px) {
+			    .CommandHeader {
+			        font-size: 1.4rem; 
+			    }
+		   }
+	@media (max-width: 390px) {
+			    .Command2Header {
+			        font-size: 1.2rem!important; 
+			    }
+		   }
+	@media (max-width: 390px) {
+			    .Command3Header {
+			        font-size: 1.1rem!important;
+				font-weight: 600!important;    
+			    }
+		   }	
+	.CommandHeader:hover>.termLink {
 	opacity: 1;
-	cursor: pointer;	
-	-webkit-transition-property: background-color, color, -webkit-box-shadow;
-        transition-property: background-color, color, -webkit-box-shadow;
-    	transition-property: background-color, color, box-shadow;
-    	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
-    	-webkit-transition-duration: .2s;
-   	transition-duration: .2s;
-    	transition-timing-function: ease-in-out;
-    	transition-timing-function: ease-in-out;
-	animation: slide1 .8s ease-in-out 2;	
+	cursor: pointer;
+	transition:opacity .5s;	      
 	}
 	.CommandLink:hover {
 	text-decoration: underline!important;	
@@ -605,20 +650,44 @@
 	opacity: 0;
 	color: #3578e5!important;
 	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;	
-	-webkit-transition-property: background-color, color, -webkit-box-shadow;
-        transition-property: background-color, color, -webkit-box-shadow;
-    	transition-property: background-color, color, box-shadow;
-    	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
-    	-webkit-transition-duration: .2s;
-   	transition-duration: .2s;
-    	transition-timing-function: ease-in-out;
-    	transition-timing-function: ease-in-out;
-	animation: slide1 .8s ease-in-out 2;	
+	}
 	
+	
+	.Command2Header {
+	color: rgba(255, 255, 255, 0.9)!important;
+	font-weight: 500;
+        text-transform: none;           
+	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
+        }
+	.Command2Header:hover>.term2Link {
+	opacity: 1;
+	cursor: pointer;
+	transition:opacity .5s;	      
+	}
+	.Command2Link:hover {
+	text-decoration: underline!important;	
+	}
+	.Command2Link {
+	opacity: 0;
+	color: #3578e5!important;
+	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;	
+	}
+	.Command3Header {
+	color: rgba(255, 255, 255, 0.7)!important;
+	font-weight: 500;
+        text-transform: none;           
+	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
+        }
+
+            .CommandBorder {
+            padding: 20px;
+            }
+	strong {
+	color: rgba(255, 255, 255, 0.9)!important;
 	}
   </style>
 </head>
-  <body>
+  <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
     <header>
       
         <!-- Navbar -->
@@ -680,8 +749,9 @@
 		       <li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/quickstart">Quickstart</a></li>
 		       <li class="tabPageNavigation_navLstItem__32vGa tabPageNavigation_navLstItem--active__1zDRZ"><a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/scrims">Scrims</a></li>
-		       <li class="subTabPageNavigation_navLstItem__32vGa subTabPageNavigation_navLstItem--active__1zDRZ"><a class="subCat" target="_self" id="" href="/scrims">Starting Scrims</a></li>
-		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" id="" href="/scrims">Game Started</a></li>
+		       <li class="subTabPageNavigation_navLstItem__32vGa subTabPageNavigation_navLstItem--active__1zDRZ"><a class="subCat" target="_self" id="" href="#test">Starting Scrims</a></li>
+		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" id="" href="#test1">Game Started</a></li>
+		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" id="" href="#test2">Code Sync</a></li>
 		       <li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/config">Configuration</a></li><li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/manage">Management</a></li><li class="tabPageNavigation_navLstItem__32vGa">
@@ -704,7 +774,9 @@
 			  			</div>
 		  			</div>
 		  		</div>
-		  		  <h1 class="CommandHeader">Start <a class="CommandLink" id="#start" title="Direct link to heading">#</a></h1>
+		  		  <h1 class="CommandHeader">Start <a class="CommandLink" id="#test" title="Direct link to heading">#</a></h1>
+		  		  <h1 class="CommandHeader">Testing For The Thing screen <a class="CommandLink" id="#test1" title="Direct link to heading">#</a></h1>
+		  		  <h1 class="CommandHeader">Testing 2 For The Thing screen <a class="CommandLink" id="#test2" title="Direct link to heading">#</a></h1>			  
 			</div>
 	  	</div>
 	  </div>
@@ -730,6 +802,11 @@
     border-top: white 1px solid;
     justify-content: flex-end;
 	   }	   
+	@media (max-width: 1023px) {	   
+		.tabPageNavigation_navLstSectn__2sNrz {
+		display: none;	
+		}
+	}	
 .tabPageNavigation_navLstSectn__2sNrz {
     position: -webkit-sticky;
     position: sticky;
@@ -1210,12 +1287,16 @@ a {
     background-color: #2585FF;
     color: white;
 }              
-                @media only screen and (min-width: 1200px) {
+                
 .tabPageNavigation_tbPagNavChldWapr__3bLNG {
     margin-left: 80px;
 }
-		      }
-@media only screen and (min-width: 1024px) {
+		      
+	@media (max-width: 1023px) {	   
+		.tabPageNavigation_tbPagNavChldWapr__3bLNG {
+    		margin-right: 40px;
+		}
+	}	
 .tabPageNavigation_tbPagNavChldWapr__3bLNG {
     margin-left: 40px;
     -webkit-flex: 1 1;
@@ -1224,7 +1305,7 @@ a {
     background: rgb(23, 24, 27)!important;
     border-radius: 16px;
 	}
-		      }
+		      
               </style>
               <div class="menu-header">
                                           <div class="flex11">
@@ -1342,7 +1423,9 @@ window.addEventListener("scroll", () => {
     <script src="assets/js/vendor/ponyfill.min.js"></script>
     <script src="assets/js/vendor/popper.min.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
-                <script src="src/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="src/index.js"></script>
     <script src="assets/js/vendor/animation.min.js"></script>
     <script src="../kit.fontawesome.com/86323babb4.js" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
