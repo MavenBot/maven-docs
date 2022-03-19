@@ -796,7 +796,7 @@ nav ul li a.active {
   </style>
 </head>
   <body data-spy="scroll" data-target="#nav" data-offset="20">
-	 <button id="myBtn" class="waves-effect waves-brown menu-toggle" title="Information" style="display: block;"> 
+	 <button data-target="modal1" id="myBtn" class="waves-effect waves-brown menu-toggle" id="mobile-menu" title="Information" style="display: block;"> 
       
       <span class="bar"></span>
       <span class="bar"></span>
@@ -1446,7 +1446,6 @@ a {
 
 .menu-toggle {
   justify-self: end;
-  margin-right: 25px;
   display: block;
 }
 
@@ -1633,7 +1632,12 @@ function scrollFunction() {
   } else {
     mybutton.style.display = "none";
   }
-}	
+}
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
+	
 </script>
 <script>
 $('.menu-toggle').click(function(){
