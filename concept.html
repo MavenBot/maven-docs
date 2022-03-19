@@ -796,12 +796,12 @@ nav ul li a.active {
   </style>
 </head>
   <body data-spy="scroll" data-target="#nav" data-offset="20">
-	 <button data-target="modal1" id="mobile-menu" id="myBtn" class="waves-effect waves-brown menu-toggle" title="Information" style="display: block;"> 
-      
+	 <button data-target="modal1" id="myBtn" class="waves-effect waves-brown" title="Information" style="display: block;"> 
+      <div class="menu-toggle" id="mobile-menu">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
-   
+		 </div>
 	  </button>	  
     <header>
       
@@ -1641,8 +1641,9 @@ function scrollFunction() {
 </script>
 <script>
 $('.menu-toggle').click(function(){
+   $(".nav").toggleClass("mobile-nav");
    $(this).toggleClass("is-active");
-});	
+});
 </script>	
              <!-- END OF PAGE -->
         <!-- ==============================================
