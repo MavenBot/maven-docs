@@ -796,14 +796,12 @@ nav ul li a.active {
   </style>
 </head>
   <body data-spy="scroll" data-target="#nav" data-offset="20">
-	  
-	  <button id="myBtn" class="waves-effect waves-brown" title="Information"> 
-		  <!--<a href="https://mavenbot.xyz/support"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000; cursor: pointer;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,14.33333c-39.49552,0 -71.66667,32.17115 -71.66667,71.66667c0,39.49552 32.17115,71.66667 71.66667,71.66667c39.49552,0 71.66667,-32.17115 71.66667,-71.66667c0,-39.49552 -32.17115,-71.66667 -71.66667,-71.66667zM86,28.66667c31.74921,0 57.33333,25.58412 57.33333,57.33333c0,31.74921 -25.58412,57.33333 -57.33333,57.33333c-31.74921,0 -57.33333,-25.58412 -57.33333,-57.33333c0,-31.74921 25.58412,-57.33333 57.33333,-57.33333zM78.83333,50.16667v14.33333h14.33333v-14.33333zM78.83333,78.83333v43h14.33333v-43z"></path></g></g></svg></a>-->
-      <div class="menu-toggle" id="mobile-menu">
+	 <button id="myBtn" class="waves-effect waves-brown menu-toggle" title="Information" style="display: block;"> 
+      
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
-      </div>
+   
 	  </button>	  
     <header>
       
@@ -1438,8 +1436,9 @@ a {
 .menu-toggle .bar{
   width: 25px;
   height: 3px;
-  background-color: #3f3f3f;
+  background-color: #fff;
   margin: 5px auto;
+  display: block;	
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1448,7 +1447,7 @@ a {
 .menu-toggle {
   justify-self: end;
   margin-right: 25px;
-  display: none;
+  display: block;
 }
 
 .menu-toggle:hover{
@@ -1634,12 +1633,13 @@ function scrollFunction() {
   } else {
     mybutton.style.display = "none";
   }
-}
-	
+}	
+</script>
+<script>
 $('.menu-toggle').click(function(){
    $(this).toggleClass("is-active");
 });	
-</script>
+</script>	
              <!-- END OF PAGE -->
         <!-- ==============================================
         Vendor Scripts
