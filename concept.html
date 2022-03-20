@@ -811,14 +811,13 @@ nav ul li a.active {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 .modal-content1 {
-  background-color: #fefefe;
   margin: 20% auto; /* 15% from the top and centered */
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
 .close1 {
-  background-color: transparent;
+  background-color: #;
 }
 
 .close1:hover,
@@ -828,7 +827,7 @@ nav ul li a.active {
 		    </style>
 </head>
   <body data-spy="scroll" data-target="#nav" data-offset="20">
-	  <div id="myBtn1">
+	  <div id="myBtn1" class="close">
 	 <button id="myBtn" class="waves-effect waves-brown" title="Information" style="display: block;"> 
       <div class="menu-toggle" id="mobile-menu">
       <span class="bar"></span>
@@ -1716,7 +1715,7 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn1");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close1")[0];
+var div = document.getElementsByClassName("close1")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
@@ -1724,7 +1723,7 @@ btn.onclick = function() {
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+div.onclick = function() {
   modal.style.display = "none";
 }
 
