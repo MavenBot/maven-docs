@@ -656,6 +656,10 @@ nav ul li a.active {
     				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;			    
 			    }
 		   }	
+	@media (max-width: 771px) {
+			    table {
+				width: 92%;
+		}
 	@media (max-width: 717px) {
 			    .pageHeader_pagHedrCmpt__1hN40 {
 				padding: 16px 16px 50px 16px!important;		    
@@ -824,11 +828,19 @@ nav ul li a.active {
 .close1:focus {
   cursor: pointer;
 }
+		
+		
 table th {
     background-color: transparent;
     color: #fff;
     font-weight: 700;
 }
+table {
+    border-collapse: collapse;
+    margin-top: 3rem;
+    margin-right: 15px;
+    margin-left: 15px;
+}		
 th {
     display: table-cell;
     vertical-align: inherit;
@@ -836,16 +848,16 @@ th {
     text-align: -internal-center;
 }
 table td, table th {
-    border: 1px solid #000;
+    border: 1px solid rgba(255, 255, 255, 0.8)!important;
     padding: 0.75rem;
 }	
 table thead tr {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 table tr {
     background-color: transparent;
-    border-top: 1px solid #000;
+    border-top: 1px solid rgba(255, 255, 255, 0.8)!important;
 }
 tr {
     display: table-row;
@@ -864,7 +876,7 @@ tbody {
 }
 table tr {
     background-color: transparent;
-    border-top: 1px solid #000;
+    border-top: 1px solid rgba(255, 255, 255, 0.8)!important;
 }
 tr {
     display: table-row;
@@ -872,17 +884,19 @@ tr {
     border-color: inherit;
 }
 table td {
-    color: var(--ifm-table-cell-color);
+    color: #fff;
 }
 
 table td, table th {
-    border: 1px solid #000;
+    border: 1px solid rgba(255, 255, 255, 0.8)!important;
     padding: 0.75rem;
 }	
 td {
     display: table-cell;
     vertical-align: inherit;
 }	
+		
+		
 		    </style>
 </head>
   <body data-spy="scroll" data-target="#nav" data-offset="20">
