@@ -532,14 +532,9 @@ nav ul li a.active {
     	font-weight: 500;
 	border-radius: 15px;
 	text-align: right;
-	-webkit-transition-property: background-color, color, -webkit-box-shadow;
-        transition-property: background-color, color, -webkit-box-shadow;
-    	transition-property: background-color, color, box-shadow;
     	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
-    	-webkit-transition-duration: .3s;
    	transition-duration: .3s;
     	transition-timing-function: ease-in-out;
-    	transition-timing-function: ease-in-out;	
 	}
 	.buttonPrev {
 	color: white!important;
@@ -552,13 +547,8 @@ nav ul li a.active {
         flex: 1;
     	font-weight: 500;
 	border-radius: 15px;
-	-webkit-transition-property: background-color, color, -webkit-box-shadow;
-        transition-property: background-color, color, -webkit-box-shadow;
-    	transition-property: background-color, color, box-shadow;
     	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
-    	-webkit-transition-duration: .2s;
-   	transition-duration: .2s;
-    	transition-timing-function: ease-in-out;
+   	transition-duration: .3s;
     	transition-timing-function: ease-in-out;
 	}
 	.buttonPrev:hover {
@@ -571,37 +561,23 @@ nav ul li a.active {
 	color: rgba(255, 255, 255, 0.5)!important;
 	}
 	.buttonPrev:hover .p24 {
-	color: rgba(255, 255, 255)!important;
-	-webkit-transition-property: background-color, color, -webkit-box-shadow;
-        transition-property: background-color, color, -webkit-box-shadow;
-    	transition-property: background-color, color, box-shadow;
-    	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
-    	-webkit-transition-duration: .2s;
-   	transition-duration: .2s;
-    	transition-timing-function: ease-in-out;
-    	transition-timing-function: ease-in-out;
-	animation: slide2 .8s ease-in-out;	
+	color: rgba(255, 255, 255)!important;    	
+	transition-timing-function: ease-in-out;	
+	-webkit-transition: transform 0.3s;
+	transition: transform .3s ease-in-out;
+        transform: translateX(-7px);		
+	}
+	.buttonNext .p24 {
+	transition: transform .3s ease-in-out;
+	}
+	.buttonPrev .p24 {
+	transition: transform .3s ease-in-out;
 	}
 	.buttonNext:hover .p24 {
 	color: rgba(255, 255, 255)!important;
-	-webkit-transition-property: background-color, color, -webkit-box-shadow;
-        transition-property: background-color, color, -webkit-box-shadow;
-    	transition-property: background-color, color, box-shadow;
-    	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
-	-webkit-transition-duration: .3s;
-   	transition-duration: .3s;
-    	transition-timing-function: ease-in-out;
-    	transition-timing-function: ease-in-out;
-		
-	-webkit-transition: transform 0.3s ease-in-out;
-        -moz-transition: transform 0.3s ease-in-out;
-        -ms-transition: transform 0.3s ease-in-out;
-        -o-transition: transform 0.3s ease-in-out;
-	transition: transform 0.3s ease-in-out;
-	-webkit-transform: translateX(7px);
-        -moz-transform: translateX(7px);
-        -ms-transform: translateX(7px);
-        -o-transform: translateX(7px);
+    	transition-timing-function: ease-in-out;	
+	-webkit-transition: transform 0.3s;
+	transition: transform .3s ease-in-out;
         transform: translateX(7px);	
 	}
 	
