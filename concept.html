@@ -433,8 +433,8 @@
     content: ""!important;
     position: absolute!important;
     display: block!important;
-    height: 3px!important;
-    width: 100%!important;
+    height: 100%!important;
+    width: 2px!important;
     bottom: 0!important;
     border-radius: 4px!important;	
 }
@@ -482,7 +482,7 @@
     font-weight: 700;
     font-size: 20px;
 }
-.subCat {
+.activeNav.subbCat {	
     color: rgba(255, 255, 255);
     font-weight: 500;
     font-size: 14px;
@@ -490,6 +490,7 @@
     justify-content: space-evenly;
     flex-wrap: nowrap;
 }
+	
 nav ul li a.yellow {
   border-bottom-color: #fff;
 }
@@ -830,7 +831,7 @@ table th {
 }
 table {
     border-collapse: collapse;
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-right: 15px;
     margin-left: 15px;
 }		
@@ -955,9 +956,9 @@ td {
 		       <li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/scrims">Scrims</a></li>
 		       <li class="tabPageNavigation_navLstItem__32vGa tabPageNavigation_navLstItem--active__1zDRZ"><a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/verification">Verification</a></li>
-		       <li class="subTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ activeNav"><a class="subCat" target="_self" id="" href="#test">Setup</a></li>
-		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" id="" href="#test1">Configurations</a></li>
-		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" id="" href="#test2">Test</a></li>
+		       <li class="subTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ activeNav"><a class="subCat" target="_self" href="#test">Setup</a></li>
+		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" href="#test1">Configurations</a></li>
+		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" href="#test2">Test</a></li>
 		       <li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/config">Configuration</a></li><li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/admin">Administration</a></li><li class="tabPageNavigation_navLstItem__32vGa">
@@ -967,7 +968,8 @@ td {
 		       </li>
 	       </ul>
 		  </nav>
-	  <div class="tabPageNavigation_tbPagNavChldWapr__3bLNG"><div class=""> 
+	  <div class="tabPageNavigation_tbPagNavChldWapr__3bLNG">
+		  <div class=""> 
 		  <div class=" pageHeader_pagHedrCmpt__1hN40">
 			  <div class="pageHeader_cntntWrap__1AUfK">
 			  <h2 class="typo_heading_5 pageHeader_mainHedrTitl__k1uPN">Verification Commands</h2>
@@ -981,13 +983,15 @@ td {
 			  			</div>
 		  			</div>
 		  		</div>
-		  		  <div id="test">
-		  		  <h1 class="CommandHeader" style="margin-top: 3rem;">Setup <a class="CommandLink" id="ssc" title="Direct link to heading">#</a></h1><p class="CommandP">Get started setting up Maven's advanced verification system. Below, we have provied detailed explainations on how to setup and use our verification system.</p>
+		  
+		  		  <section class="sepNav">
+		  		  <h1 class="CommandHeader" id="setup" style="margin-top: 3rem;">Setup <a class="CommandLink" href="#setup" title="Direct link to heading">#</a></h1>
+					  <p class="CommandP">Get started setting up Maven's advanced verification system. Below, we have provied detailed explainations on how to setup and use our verification system.</p>
 					  <img class="CommandImg" src="https://cdn.discordapp.com/attachments/870140702032547850/954533565310328950/IMG_3130.gif"></img>
 						<p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p>
-		  		  </div>
-		  		  <div id="test1">		  
-		  		  <h1 class="CommandHeader">Configurations <a class="CommandLink" id="test1" title="Direct link to heading">#</a></h1>
+		  		  </section>
+		  		  <section class="sepNav">		  
+		  		  <h1 class="CommandHeader" id="Configs">Configurations <a class="CommandLink" href="#configs" title="Direct link to heading">#</a></h1>
 					
 					  <table>			
 						<thead>
@@ -1002,10 +1006,15 @@ td {
 						
 						</thead>
 					</table>
-		  		  </div>
-		  		  <div id="test2">		  
-		  		  <h1 class="CommandHeader">Testing 2 For The Thing screen <a class="CommandLink" id="test2" title="Direct link to heading">#</a></h1>
-		  		  </div>			  
+
+				  <p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p>
+		  		  </section>
+		  
+		  		  <section class="sepNav">		  
+		  		  <h1 class="CommandHeader" id="screen">Testing 2 For The Thing screen <a class="CommandLink" href="#screen" title="Direct link to heading">#</a></h1>
+		  
+				  <p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p>		  
+		  		</section>			  
 			</div>
 	  	</div>
 	  </div>
@@ -1692,7 +1701,40 @@ a {
         </div>
   </div>
                                     <script>
-$("#nav").scrollspy({ offset: -75 });					    
+const makeNavLinksSmooth = ( ) => {
+  const navLinks = document.querySelectorAll( '.subbTabPageNavigation_navLstItem' );
+
+  for ( let n in navLinks ) {
+    if ( navLinks.hasOwnProperty( n ) ) {
+      navLinks[ n ].addEventListener( 'click', e => {
+        e.preventDefault( );
+        document.querySelector( navLinks[ n ].hash )
+          .scrollIntoView( {
+            behavior: "smooth"
+          } );
+      } );
+    }
+  }
+}
+
+const spyScrolling = ( ) => {
+  const sections = document.querySelectorAll( '.sepNav' );
+
+  window.onscroll = ( ) => {
+    const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+
+    for ( let s in sections )
+      if ( sections.hasOwnProperty( s ) && sections[ s ].offsetTop <= scrollPos ) {
+        const id = sections[ s ].id;
+        document.querySelector( '.activeNav' ).classList.remove( 'activeNav' );
+        document.querySelector( `a[href*=${ id }]` ).parentNode.classList.add( 'activeNav' );
+      }
+  }  
+}
+
+makeNavLinksSmooth( );
+spyScrolling( );
+				    
 					    
 </script>   
 
