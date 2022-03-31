@@ -482,7 +482,7 @@
     font-weight: 700;
     font-size: 20px;
 }
-.activeNav.subbCat {	
+.activeNav .subbCat {	
     color: rgba(255, 255, 255);
     font-weight: 500;
     font-size: 14px;
@@ -956,7 +956,7 @@ td {
 		       <li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/scrims">Scrims</a></li>
 		       <li class="tabPageNavigation_navLstItem__32vGa tabPageNavigation_navLstItem--active__1zDRZ"><a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/verification">Verification</a></li>
-		       <li class="subTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ activeNav"><a class="subCat" target="_self" href="#test">Setup</a></li>
+		       <li class="subTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ activeNav"><a class="subbCat" target="_self" href="#test">Setup</a></li>
 		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" href="#test1">Configurations</a></li>
 		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" href="#test2">Test</a></li>
 		       <li class="tabPageNavigation_navLstItem__32vGa">
@@ -984,13 +984,13 @@ td {
 		  			</div>
 		  		</div>
 		  
-		  		  <section class="sepNav">
+		  		  <section id="test" class="sepNav">
 		  		  <h1 class="CommandHeader" id="setup" style="margin-top: 3rem;">Setup <a class="CommandLink" href="#setup" title="Direct link to heading">#</a></h1>
 					  <p class="CommandP">Get started setting up Maven's advanced verification system. Below, we have provied detailed explainations on how to setup and use our verification system.</p>
 					  <img class="CommandImg" src="https://cdn.discordapp.com/attachments/870140702032547850/954533565310328950/IMG_3130.gif"></img>
 						<p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p>
 		  		  </section>
-		  		  <section class="sepNav">		  
+		  		  <section id="test1" class="sepNav">		  
 		  		  <h1 class="CommandHeader" id="Configs">Configurations <a class="CommandLink" href="#configs" title="Direct link to heading">#</a></h1>
 					
 					  <table>			
@@ -1010,7 +1010,7 @@ td {
 				  <p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p>
 		  		  </section>
 		  
-		  		  <section class="sepNav">		  
+		  		  <section id="test2" class="sepNav">		  
 		  		  <h1 class="CommandHeader" id="screen">Testing 2 For The Thing screen <a class="CommandLink" href="#screen" title="Direct link to heading">#</a></h1>
 		  
 				  <p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p>		  
@@ -1080,7 +1080,9 @@ td {
     font-style: normal;
     letter-spacing: normal;
 }	   
-
+	   section {
+	   padding: 0px!important;
+	   }
 .tabPageNavigation_navigtnLst__1t0IT {
     margin-top: 1rem;
     display: block;
