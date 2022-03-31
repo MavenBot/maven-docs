@@ -1703,41 +1703,31 @@ a {
         </div>
   </div>
                                     <script>
-const makeNavLinksSmooth = ( ) => {
-  const navLinks = document.querySelectorAll( '.subbTabPageNavigation_navLstItem' );
+document.addEventListener('DOMContentLoaded', function(){ 
+  
+  // grab the sections (targets) and menu_links (triggers)
+  // for menu items to apply active link styles to
+  const sections = document.querySelectorAll(".sepNav");
+  const menu_links = document.querySelectorAll(".subbTabPageNavigation_navLstItem--active__1zDRZ");
+  
+  // functions to add and remove the active class from links as appropriate
+  const makeActive = (link) => menu_links[link].classList.add("activeNav");
+  const removeActive = (link) => menu_links[link].classList.remove("activeNav");
+  const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
+  
+  const sectionMargin = 200;
+  let currentActive = 0;
+	
+  window.addEventListener("scroll", () => {
+    
+    const current = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin ) - 1
 
-  for ( let n in navLinks ) {
-    if ( navLinks.hasOwnProperty( n ) ) {
-      navLinks[ n ].addEventListener( 'click', e => {
-        e.preventDefault( );
-        document.querySelector( navLinks[ n ].hash )
-          .scrollIntoView( {
-            behavior: "smooth"
-          } );
-      } );
+    if (current !== currentActive) {
+      removeAllActive();
+      currentActive = current;
+      makeActive(current);
     }
-  }
-}
-
-const spyScrolling = ( ) => {
-  const sections = document.querySelectorAll( '.sepNav' );
-
-  window.onscroll = ( ) => {
-    const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
-
-    for ( let s in sections )
-      if ( sections.hasOwnProperty( s ) && sections[ s ].offsetTop <= scrollPos ) {
-        const id = sections[ s ].id;
-        document.querySelector( '.activeNav' ).classList.remove( 'activeNav' );
-        document.querySelector( `a[href*=${ id }]` ).parentNode.classList.add( 'activeNav' );
-      }
-  }  
-}
-
-makeNavLinksSmooth( );
-spyScrolling( );
-				    
-					    
+  });			    
 </script>   
 
 
