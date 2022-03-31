@@ -1702,32 +1702,30 @@ a {
             </div>
         </div>
   </div>
-                                    <script>
-document.addEventListener('DOMContentLoaded', function(){ 
-  
-  // grab the sections (targets) and menu_links (triggers)
-  // for menu items to apply active link styles to
-  const sections = document.querySelectorAll(".sepNav");
-  const menu_links = document.querySelectorAll(".subbTabPageNavigation_navLstItem--active__1zDRZ");
-  
-  // functions to add and remove the active class from links as appropriate
-  const makeActive = (link) => menu_links[link].classList.add("activeNav");
-  const removeActive = (link) => menu_links[link].classList.remove("activeNav");
-  const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
-  
-  const sectionMargin = 200;
-  let currentActive = 0;
-	
-  window.addEventListener("scroll", () => {
-    
-    const current = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin ) - 1
 
-    if (current !== currentActive) {
-      removeAllActive();
-      currentActive = current;
-      makeActive(current);
+<script>
+(function() {
+  'use strict';
+
+  var section = document.querySelectorAll(".sepNav");
+  var sections = {};
+  var i = 0;
+
+  Array.prototype.forEach.call(section, function(e) {
+    sections[e.id] = e.offsetTop;
+  });
+
+  window.onscroll = function() {
+    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    for (i in sections) {
+      if (sections[i] <= scrollPosition) {
+        document.querySelector('.activeNav').setAttribute('class', ' ');
+        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'activeNav');
+      }
     }
-  });			    
+  };
+})();
 </script>   
 
 
