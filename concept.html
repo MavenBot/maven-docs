@@ -588,11 +588,19 @@ nav ul li a.active {
         transition-property: background-color, color, -webkit-box-shadow;
     	transition-property: background-color, color, box-shadow;
     	transition-property: background-color, color, box-shadow, -webkit-box-shadow;
-    	-webkit-transition-duration: .2s;
-   	transition-duration: .2s;
-    	transition-timing-function: ease-in-out;
-    	transition-timing-function: ease-in-out;
-	animation: slide1 .8s ease-in-out 2;	
+	
+	-webkit-transition: transform 0.3s ease-out;
+        -moz-transition: transform 0.3s ease-out;
+        -ms-transition: transform 0.3s ease-out;
+        -o-transition: transform 0.3s ease-out;
+		
+	transition: transform 0.3s ease-out;
+	-webkit-transform: translateX(4px);
+        -moz-transform: translateX(4px);
+        -ms-transform: translateX(4px);
+        -o-transform: translateX(4px);
+        transform: translateX(4px);	
+	/*animation: slide1 .8s ease-in-out 2;*/
 	}
 	
         .familyF {
