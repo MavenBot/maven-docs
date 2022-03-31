@@ -428,8 +428,15 @@
     bottom: 0;
     border-radius: 4px;
 }
-.subTabPageNavigation_navLstItem--active__1zDRZ:before {
-    background-color: #2585FF;
+.activeNav:before {
+    background-color: #2585FF!important;
+    content: ""!important;
+    position: absolute!important;
+    display: block!important;
+    height: 3px!important;
+    width: 100%!important;
+    bottom: 0!important;
+    border-radius: 4px!important;	
 }
 .subTabPageNavigation_navLstItem__32vGa:before {
     content: "";
@@ -717,6 +724,9 @@ nav ul li a.active {
 	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;	
 	}
 	
+	body {
+	position: relative;
+	}
 	
 	.Command2Header {
 	color: rgba(255, 255, 255, 0.9)!important;
@@ -882,7 +892,7 @@ td {
 		
 		    </style>
 </head>
-  <body data-spy="scroll" data-target="#nav" data-offset="20">
+  <body data-spy="scroll" data-offset="20">
 	  <button id="myBtn" class="waves-effect waves-brown" title="Information"><a href="https://mavenbot.xyz/support"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000; cursor: pointer;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,14.33333c-39.49552,0 -71.66667,32.17115 -71.66667,71.66667c0,39.49552 32.17115,71.66667 71.66667,71.66667c39.49552,0 71.66667,-32.17115 71.66667,-71.66667c0,-39.49552 -32.17115,-71.66667 -71.66667,-71.66667zM86,28.66667c31.74921,0 57.33333,25.58412 57.33333,57.33333c0,31.74921 -25.58412,57.33333 -57.33333,57.33333c-31.74921,0 -57.33333,-25.58412 -57.33333,-57.33333c0,-31.74921 25.58412,-57.33333 57.33333,-57.33333zM78.83333,50.16667v14.33333h14.33333v-14.33333zM78.83333,78.83333v43h14.33333v-43z"></path></g></g></svg></a>
 	  </button>	  
 
@@ -939,15 +949,15 @@ td {
      <!-- START OF PAGE -->
 	  <div class="docsPage_docsNavigation__2ExMB">
 	  <div class="tabPageNavigation_tbPageNavCntntWapr__307yn">
-       <nav class="tabPageNavigation_navLstSectn__2sNrz" id="nav" style="margin-left: 0px;background: rgb(23, 24, 27)!important;border-radius: 13px;margin-right: 0rem;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;">
-	       
+		  
+       <nav class="tabPageNavigation_navLstSectn__2sNrz" id="nav" style="margin-left: 0px;background: rgb(23, 24, 27)!important;border-radius: 13px;margin-right: 0rem;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;">	       
 	       <ul class="tabPageNavigation_navigtnLst__1t0IT" style="padding-left:0px;">
 		       <li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/scrims">Scrims</a></li>
 		       <li class="tabPageNavigation_navLstItem__32vGa tabPageNavigation_navLstItem--active__1zDRZ"><a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/verification">Verification</a></li>
-		       <li class="subTabPageNavigation_navLstItem__32vGa subTabPageNavigation_navLstItem--active__1zDRZ"><a class="subCat active" target="_self" id="" href="#test">Setup</a></li>
+		       <li class="subTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ activeNav"><a class="subCat" target="_self" id="" href="#test">Setup</a></li>
 		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" id="" href="#test1">Configurations</a></li>
-		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" id="" href="#test2">Code Sync</a></li>
+		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" id="" href="#test2">Test</a></li>
 		       <li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/config">Configuration</a></li><li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/admin">Administration</a></li><li class="tabPageNavigation_navLstItem__32vGa">
@@ -1684,49 +1694,9 @@ a {
                                     <script>
 $("#nav").scrollspy({ offset: -75 });					    
 					    
-const scrollElements = document.querySelectorAll(".js-scroll");
+</script>   
 
-const elementInView = (el, dividend = 1) => {
-  const elementTop = el.getBoundingClientRect().top;
 
-  return (
-    elementTop <=
-    (window.innerHeight || document.documentElement.clientHeight) / dividend
-  );
-};
-
-const elementOutofView = (el) => {
-  const elementTop = el.getBoundingClientRect().top;
-
-  return (
-    elementTop > (window.innerHeight || document.documentElement.clientHeight)
-  );
-};
-
-const displayScrollElement = (element) => {
-  element.classList.add("scrolled");
-};
-
-const hideScrollElement = (element) => {
-  element.classList.remove("scrolled");
-};
-
-const handleScrollAnimation = () => {
-  scrollElements.forEach((el) => {
-    if (elementInView(el, 1.25)) {
-      displayScrollElement(el);
-    } else if (elementOutofView(el)) {
-      hideScrollElement(el)
-    }
-  })
-}
-
-window.addEventListener("scroll", () => { 
-  handleScrollAnimation();
-
-	
-});
-            </script>   
 <script>
 //Get the button
 var mybutton = document.getElementById("myBtn");
@@ -1747,6 +1717,7 @@ function scrollFunction() {
   });
 	
 </script>
+
 <script>
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -1774,13 +1745,8 @@ window.onclick = function(event) {
   }
 }
 </script>
-<script>
-$('.menu-toggle').click(function(){
-   $(".nav").toggleClass("mobile-nav");
-   $(this).toggleClass("is-active");
-});
-</script>	
-             <!-- END OF PAGE -->
+
+	<!-- END OF PAGE -->
         <!-- ==============================================
         Vendor Scripts
         =============================================== -->
