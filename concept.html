@@ -887,7 +887,7 @@ table tr {
 
 	
 .admonition {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .alert {
@@ -897,19 +897,31 @@ table tr {
     --ifm-link-decoration: underline;
     --ifm-tabs-color: #fff;
     --ifm-tabs-color-active: #fff;
-    --ifm-tabs-color-active-border: #2585FF;
-    background-color: #0067ea;
-    border: 0px solid #2585FF;
-    border-left: 5px solid #2585FF;
+    --ifm-tabs-color-active-border: #0067ea;
+    background-color: #2585FF;
+    border: 0px solid #0067ea;
+    border-left: 5px solid #0067ea;
     border-radius: 0.4rem;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+    margin-left: 15px;
+    max-width: 70%;
     padding: 1em;	
 }
+@media (max-width: 936px) {	
+	.alert {
+	max-width: 92%;
+	}
+}
+@media (max-width: 380px) {	
+	.alert p {
+	  font-size: 14px!important;
+	}
+}		
 .alert--info {
-    --ifm-alert-background-color: #0067ea;
+    --ifm-alert-background-color: #2585FF;
     --ifm-alert-background-color-highlight: rgba(84,199,236,0.15);
     --ifm-alert-foreground-color: #fff;
-    --ifm-alert-border-color: #2585FF;
+    --ifm-alert-border-color: #0067ea;
 }
 .alert, .alert .close {
     color: #fff;
@@ -925,14 +937,14 @@ table tr {
 .admonition-icon {
     display: inline-block;
     margin-right: 0.4em;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 .admonition-icon svg {
     stroke-width: 0;
     stroke: white;
     display: inline-block;
-    height: 22px;
-    width: 22px;
+    height: 24px;
+    width: 24px;
 }
 .admonition-icon svg, .alert__icon svg {
     fill: white;
@@ -1056,11 +1068,11 @@ td {
 					  <img class="CommandImg" src="https://cdn.discordapp.com/attachments/870140702032547850/954533565310328950/IMG_3130.gif"></img>
 						<div style="margin-left:30px;margin-top:2rem;padding:0px;">
 							<p class="CommandP"><strong>1. </strong>To get started with verification, use the slash command <code>/verificationmessage</code>.</p>
-							<p class="CommandP"><strong>2. </strong>Fill out the <code>channel</code field, for the verification message. This is the message with the blurple button people click to link their account. This should be a public channel. Hit <code>send</code> to post the message & enable verification!</p>
+							<p class="CommandP"><strong>2. </strong>Fill out the <code>channel</code> field, for the verification message. This is the message with the blurple button people click to link their account. This should be a public channel. Hit <code>send</code> to post the message & enable verification!</p>
 							<p class="CommandP"><strong>3. </strong>Enable logging by using the slash command <code>/setlogchannel</code>.</p>
-							<p class="CommandP"><strong>4. </strong>Fill out the <code>channel</code field, for the log channel. This is the channel which will log events regarding verification & verification requirement roles given. This should be a private channel for staff only. Hit <code>send</code> to post the message & enable logging!</p>
+							<p class="CommandP"><strong>4. </strong>Fill out the <code>channel</code> field, for the log channel. This is the channel which will log events regarding verification & verification requirement roles given. This should be a private channel for staff only. Hit <code>send</code> to post the message & enable logging!</p>
 		  				</div>	
-		 				<p class="CommandP">Setup complete! Server members are now able to verify & you're able to view logs. To setup verification requirements and configure other options, continue reading.</p>
+		 				<p class="CommandP" style="margin-top: 1rem;margin-bottom: 1rem;">Setup complete! Server members are now able to verify & you're able to view logs. To setup verification requirements and configure other options, continue reading.</p>
 		  				<div class="admonition admonition-info alert alert--info">
 							<div class="admonition-heading">
 								<h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,14.33333c-39.49552,0 -71.66667,32.17115 -71.66667,71.66667c0,39.49552 32.17115,71.66667 71.66667,71.66667c39.49552,0 71.66667,-32.17115 71.66667,-71.66667c0,-39.49552 -32.17115,-71.66667 -71.66667,-71.66667zM86,28.66667c31.74921,0 57.33333,25.58412 57.33333,57.33333c0,31.74921 -25.58412,57.33333 -57.33333,57.33333c-31.74921,0 -57.33333,-25.58412 -57.33333,-57.33333c0,-31.74921 25.58412,-57.33333 57.33333,-57.33333zM78.83333,50.16667v14.33333h14.33333v-14.33333zM78.83333,78.83333v43h14.33333v-43z"></path></g></g></svg></span>INFO</h5>
