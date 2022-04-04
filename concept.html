@@ -829,6 +829,7 @@ code {
     -webkit-text-combine: horizontal;
     padding: 0.1rem;
     font-weight: 550;
+    vertical-align: text-top;
     color: white;
     background-color: rgb(36, 37, 42)!important;
     font-size: 95%!important;	
@@ -898,13 +899,13 @@ table tr {
     --ifm-tabs-color: #fff;
     --ifm-tabs-color-active: #fff;
     --ifm-tabs-color-active-border: #0067ea;
-    background-color: #2585FF;
+    background-color: #0052bb;
     border: 0px solid #0067ea;
     border-left: 5px solid #0067ea;
     border-radius: 0.4rem;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
     margin-left: 15px;
-    max-width: 70%;
+    max-width: 80%;
     padding: 1em;	
 }
 @media (max-width: 936px) {	
@@ -918,7 +919,7 @@ table tr {
 	}
 }		
 .alert--info {
-    --ifm-alert-background-color: #2585FF;
+    --ifm-alert-background-color: #0052bb;
     --ifm-alert-background-color-highlight: rgba(84,199,236,0.15);
     --ifm-alert-foreground-color: #fff;
     --ifm-alert-border-color: #0067ea;
@@ -948,7 +949,45 @@ table tr {
 }
 .admonition-icon svg, .alert__icon svg {
     fill: white;
-}	
+}
+	
+	
+.alert2 {
+    --ifm-code-background: rgba(84,199,236,0.15);
+    --ifm-link-color: #fff;
+    --ifm-link-hover-color: #fff;
+    --ifm-link-decoration: underline;
+    --ifm-tabs-color: #fff;
+    --ifm-tabs-color-active: #fff;
+    --ifm-tabs-color-active-border: #e22d2d;
+    background-color: #be1a1a;
+    border: 0px solid #e22d2d;
+    border-left: 5px solid #e22d2d;
+    border-radius: 0.4rem;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+    margin-left: 15px;
+    max-width: 80%;
+    padding: 1em;	
+}
+@media (max-width: 936px) {	
+	.alert2 {
+	max-width: 92%;
+	}
+}
+@media (max-width: 380px) {	
+	.alert2 p {
+	  font-size: 14px!important;
+	}
+}		
+.alert2--info {
+    --ifm-alert-background-color: #be1a1a;
+    --ifm-alert-background-color-highlight: rgba(84,199,236,0.15);
+    --ifm-alert-foreground-color: #fff;
+    --ifm-alert-border-color: #e22d2d;
+}
+.alert2, .alert2 .close {
+    color: #fff;
+}		
 tr {
     display: table-row;
     vertical-align: inherit;
@@ -1093,15 +1132,20 @@ td {
 							<tbody>
 								<tr><td>Enabled</td><td> On / Off</td><td>Enables verification in your server. If you want to use verification, a channel must be configured. This is the slash command <code>/verificationmessage</code>.</td></tr>
 								<tr><td>Log Channel</td><td>#channel</td><td>Select a channel where Maven should log all verification, requirement, and error events. This is the slash command <code>/setlogchannel</code>.</td></tr>
-								<tr><td>Nickname Whitelist</td><td>@role(s)</td><td>Maven will not change nicknames of users having at least one of the whitelisted roles. This is the slash command <code>/nicknamewhitelistroles add</code>.</td></tr>
-						  
+								<tr><td>Nickname Whitelist</td><td>@role(s)</td><td>Maven will not change nicknames of users having at least one of the whitelisted roles. This is the slash command <code>/nicknamewhitelistroles add</code>.</td></tr>	
 						  </tbody>
 						
 						</thead>
 					</table>
-
-				  <p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p>
-		  		  </section>
+						  <div class="admonition admonition-info alert2 alert2--info">
+							<div class="admonition-heading">
+								<h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#1fb141"><path d="M21.5,21.5v129h64.5v-32.25v-64.5v-32.25zM86,53.75c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25c-17.7805,0 -32.25,14.4695 -32.25,32.25zM118.25,86c-17.7805,0 -32.25,14.4695 -32.25,32.25c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25z"></path></g></g></svg></span>Warning</h5>
+							</div>
+							<div class="admonition-content">
+								<p>Note, these are the minimal amount of steps required. Continue reading and find out about many more optional steps you can take.</p>
+							</div>
+		  				</div>
+				  </section>
 		  
 		  		  <section id="test2" class="sepNav">		  
 		  		  <h1 class="CommandHeader" id="verify-requirements">Verification Requirements <a class="CommandLink" href="#verify-requirements" title="Direct link to heading">#</a></h1>
