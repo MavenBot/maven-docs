@@ -932,9 +932,7 @@ table tr {
     margin-bottom: 8px;
     margin-top: 0;
 }
-.admonition h5, .alert__heading, .text--uppercase {
-    text-transform: uppercase;
-}
+
 .admonition-icon {
     display: inline-block;
     margin-right: 0.4em;
@@ -950,7 +948,6 @@ table tr {
 .admonition-icon svg, .alert__icon svg {
     fill: white;
 }
-	
 	
 .alert2 {
     --ifm-code-background: rgba(84,199,236,0.15);
@@ -1114,7 +1111,7 @@ td {
 		 				<p class="CommandP" style="margin-top: 1rem;margin-bottom: 1rem;">Setup complete! Server members are now able to verify & you're able to view logs. To setup verification requirements and configure other options, continue reading.</p>
 		  				<div class="admonition admonition-info alert alert--info">
 							<div class="admonition-heading">
-								<h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,14.33333c-39.49552,0 -71.66667,32.17115 -71.66667,71.66667c0,39.49552 32.17115,71.66667 71.66667,71.66667c39.49552,0 71.66667,-32.17115 71.66667,-71.66667c0,-39.49552 -32.17115,-71.66667 -71.66667,-71.66667zM86,28.66667c31.74921,0 57.33333,25.58412 57.33333,57.33333c0,31.74921 -25.58412,57.33333 -57.33333,57.33333c-31.74921,0 -57.33333,-25.58412 -57.33333,-57.33333c0,-31.74921 25.58412,-57.33333 57.33333,-57.33333zM78.83333,50.16667v14.33333h14.33333v-14.33333zM78.83333,78.83333v43h14.33333v-43z"></path></g></g></svg></span>INFO</h5>
+								<h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,14.33333c-39.49552,0 -71.66667,32.17115 -71.66667,71.66667c0,39.49552 32.17115,71.66667 71.66667,71.66667c39.49552,0 71.66667,-32.17115 71.66667,-71.66667c0,-39.49552 -32.17115,-71.66667 -71.66667,-71.66667zM86,28.66667c31.74921,0 57.33333,25.58412 57.33333,57.33333c0,31.74921 -25.58412,57.33333 -57.33333,57.33333c-31.74921,0 -57.33333,-25.58412 -57.33333,-57.33333c0,-31.74921 25.58412,-57.33333 57.33333,-57.33333zM78.83333,50.16667v14.33333h14.33333v-14.33333zM78.83333,78.83333v43h14.33333v-43z"></path></g></g></svg></span>Information</h5>
 							</div>
 							<div class="admonition-content">
 								<p>Note, these are the minimal amount of steps required. Continue reading and find out about many more optional steps you can take.</p>
@@ -1124,7 +1121,8 @@ td {
 		  
 		  		  <section id="test1" class="sepNav">		  
 		  		  <h1 class="CommandHeader" id="configs">Configurations <a class="CommandLink" href="#configs" title="Direct link to heading">#</a></h1>
-					
+					<p class="CommandP" style="margin-top: 1.5rem;margin-bottom: 1.5rem;">Below are general configurations you can make with slash commands. To learn about them read the table below.</p>
+					  
 					  <table>			
 						<thead>
 							<tr><th>Config</th><th>Options</th><th>Description</th></tr>
@@ -1132,17 +1130,19 @@ td {
 							<tbody>
 								<tr><td>Enabled</td><td> On / Off</td><td>Enables verification in your server. If you want to use verification, a channel must be configured. This is the slash command <code>/verificationmessage</code>.</td></tr>
 								<tr><td>Log Channel</td><td>#channel</td><td>Select a channel where Maven should log all verification, requirement, and error events. This is the slash command <code>/setlogchannel</code>.</td></tr>
-								<tr><td>Nickname Whitelist</td><td>@role(s)</td><td>Maven will not change nicknames of users having at least one of the whitelisted roles. This is the slash command <code>/nicknamewhitelistroles add</code>.</td></tr>	
+								<tr><td>Nickname Whitelist</td><td>@role(s)</td><td>Maven will not change nicknames of users having at least one of the whitelisted roles. This is the slash command <code>/nicknamewhitelistroles add</code>.</td></tr>
+								<tr><td>Verification Role</td><td>@role(s)</td><td>Maven will give a user this role once they complete the verification process. This is the slash command <code>/verificationrole</code>.</td></tr>									
 						  </tbody>
 						
 						</thead>
 					</table>
-						  <div class="admonition admonition-info alert2 alert2--info">
+		  
+						  <div class="admonition admonition-info alert2 alert2--info" style="margin-top: 1rem;">
 							<div class="admonition-heading">
-								<h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#1fb141"><path d="M21.5,21.5v129h64.5v-32.25v-64.5v-32.25zM86,53.75c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25c-17.7805,0 -32.25,14.4695 -32.25,32.25zM118.25,86c-17.7805,0 -32.25,14.4695 -32.25,32.25c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25z"></path></g></g></svg></span>Warning</h5>
+								<h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Warning</h5>
 							</div>
 							<div class="admonition-content">
-								<p>Note, these are the minimal amount of steps required. Continue reading and find out about many more optional steps you can take.</p>
+								<p>Make sure that Maven has the <code>Manage Nicknames</code> permission, so that it can change nicknames. Make sure the Maven  is role near the top of your role list as Maven can only change nicknames of users that don't have a higher or equal role than Maven's highest role. Maven can not change the name of the server owner, even if it has the highest role. You may recieve a <code>Missing Permissions</code> error in your log channel, if the steps provided are not followed.</p>
 							</div>
 		  				</div>
 				  </section>
