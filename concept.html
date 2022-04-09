@@ -1181,9 +1181,10 @@ td {
 							<tr><th>Config</th><th>Options</th><th>Description</th></tr>
 						
 							<tbody>
-								<tr><td>Games Played</td><td>Number</td><td>Enables verification in your server. If you want to use verification, a channel must be configured. This is the slash command <code>/verificationmessage</code>.</td></tr>
-								<tr><td>Platform</td><td>PC / Console / Mobile</td><td>Select a channel where Maven should log all verification, requirement, and error events. This is the slash command <code>/setlogchannel</code>.</td></tr>
-								<tr><td>Role</td><td>@role</td><td>Maven will not change nicknames of users having at least one of the whitelisted roles. This is the slash command <code>/nicknamewhitelistroles add</code>.</td></tr>
+								<tr><td>Enabled</td><td> On / Off</td><td>Enables verification in your server. If you want to use verification, a channel must be configured. This is the slash command <code>/verificationmessage</code>.</td></tr>
+								<tr><td>Log Channel</td><td>#channel</td><td>Select a channel where Maven should log all verification, requirement, and error events. This is the slash command <code>/setlogchannel</code>.</td></tr>
+								<tr><td>Nickname Whitelist</td><td>@role(s)</td><td>Maven will not change nicknames of users having at least one of the whitelisted roles. This is the slash command <code>/nicknamewhitelistroles add</code>.</td></tr>
+								<tr><td>Verification Role</td><td>@role</td><td>Maven will give a user this role once they complete the verification process. This is the slash command <code>/verificationrole</code>.</td></tr>									
 						  </tbody>
 						
 						</thead>
@@ -1208,19 +1209,33 @@ td {
 						<p class="CommandP"><strong>2. </strong>Fill out the <code>role</code> field, by picking a verification role. This is the role Maven will add to members that verify, but do not meet any requirements. Hit <code>send</code> to post the message & add a base verification role!</p>
 					</div>				
 		  		  <p class="CommandP" style="margin-top: 1.5rem;margin-bottom: 1.5rem;">Maven will now grant this role to everyone that has completed verification. Verification Requirements come with a lot more features. Keep reading to learn how to set requirements. These requirements include: player platform & number of games played.</p>
-					  
+		  		  <p class="CommandP">Maven is able to grant roles to verified members. Users are able set specific conditions, to grant roles to members. This feature allows users to give verified members access to the server or private channels. By adding additional conditions, the verified member will need to meet those requirements in addition to being verified, to gain access.</p>
+		  		  <p class="CommandP">To add the base verification role, follow these simple steps below:</p>
+					<div style="margin-left:30px;margin-top:2rem;padding:0px;">
+						<p class="CommandP"><strong>1. </strong>To get started with adding verification requirments, use the slash command <code>/verificationconfigs set</code>.</p>
+						<p class="CommandP"><strong>2. </strong>Fill out the <code>platform</code>, <code>games-played</code>, and <code>role</code>, fields, these are all optional feilds. Hit <code>send</code> to post the message & add a verification requirement!</p>
+					</div>	
+	  				<div class="admonition admonition-info alert alert--info">
+							<div class="admonition-heading">
+								<h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,14.33333c-39.49552,0 -71.66667,32.17115 -71.66667,71.66667c0,39.49552 32.17115,71.66667 71.66667,71.66667c39.49552,0 71.66667,-32.17115 71.66667,-71.66667c0,-39.49552 -32.17115,-71.66667 -71.66667,-71.66667zM86,28.66667c31.74921,0 57.33333,25.58412 57.33333,57.33333c0,31.74921 -25.58412,57.33333 -57.33333,57.33333c-31.74921,0 -57.33333,-25.58412 -57.33333,-57.33333c0,-31.74921 25.58412,-57.33333 57.33333,-57.33333zM78.83333,50.16667v14.33333h14.33333v-14.33333zM78.83333,78.83333v43h14.33333v-43z"></path></g></g></svg></span>Information</h5>
+							</div>
+							<div class="admonition-content">
+								<p>Note, if you do not set the field <code>role</code>, the requirement will become the base verification requirement. This means, in order to verify and recieve the <code>base verification role</code> a user will need to meet that base verification reqirement.</p>
+							</div>
+		  				</div>					  
 				  <img class="CommandImg" style="margin-bottom: 1rem;" src="https://cdn.discordapp.com/attachments/718518892296929352/960698312900612166/IMG_3418.gif"></img>
-		  
+				  <h2 class="Command2Header" id="requirements">Setup Requirements <a class="Command2Link" href="#setup-requirements" title="Direct link to subheading">#</a></h2>
+		  			
 				  <h2 class="Command2Header" id="requirements">Requirements <a class="Command2Link" href="#requirements" title="Direct link to subheading">#</a></h2>
+		  
 					  <table>			
 						<thead>
 							<tr><th>Requirements</th><th>Options</th><th>Description</th></tr>
 						
 							<tbody>
-								<tr><td>Enabled</td><td> On / Off</td><td>Enables verification in your server. If you want to use verification, a channel must be configured. This is the slash command <code>/verificationmessage</code>.</td></tr>
-								<tr><td>Log Channel</td><td>#channel</td><td>Select a channel where Maven should log all verification, requirement, and error events. This is the slash command <code>/setlogchannel</code>.</td></tr>
-								<tr><td>Nickname Whitelist</td><td>@role(s)</td><td>Maven will not change nicknames of users having at least one of the whitelisted roles. This is the slash command <code>/nicknamewhitelistroles add</code>.</td></tr>
-								<tr><td>Verification Role</td><td>@role</td><td>Maven will give a user this role once they complete the verification process. This is the slash command <code>/verificationrole</code>.</td></tr>									
+								<tr><td>Games Played</td><td>Number</td><td>Enables verification in your server. If you want to use verification, a channel must be configured. This is the slash command <code>/verificationmessage</code>.</td></tr>
+								<tr><td>Platform</td><td>PC / Console / Mobile</td><td>Select a channel where Maven should log all verification, requirement, and error events. This is the slash command <code>/setlogchannel</code>.</td></tr>
+								<tr><td>Role</td><td>@role</td><td>Maven will not change nicknames of users having at least one of the whitelisted roles. This is the slash command <code>/nicknamewhitelistroles add</code>.</td></tr>								
 						  </tbody>
 						
 						</thead>
@@ -1228,7 +1243,7 @@ td {
 	  		  
 		  		</section>
 		  
-		  		  <section id="test3" class="sepNav">		  
+		  		  <section id="verifying-section" class="sepNav">		  
 		  		  <h1 class="CommandHeader" id="verifying">Verifying <a class="CommandLink" href="#verifying" title="Direct link to heading">#</a></h1>
 		  
 				  <p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p>		  
