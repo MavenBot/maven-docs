@@ -1122,10 +1122,10 @@ td {
 		       <li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/scrims">Scrims</a></li>
 		       <li class="tabPageNavigation_navLstItem__32vGa tabPageNavigation_navLstItem--active__1zDRZ"><a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/verification">Verification</a></li>
-		       <li class="subTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ activeNav"><a class="subbCat" target="_self" href="#test">Setup</a></li>
+		       <li class="subTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ activeNav"><a class="subbCat" target="_self" href="#setup-section">Setup</a></li>
 		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" href="#test1">Configurations</a></li>
 		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" href="#test2">Requirements</a></li>
-		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" href="#test2">Verifying</a></li>
+		       <li class="subbTabPageNavigation_navLstItem__32vGa subbTabPageNavigation_navLstItem--active__1zDRZ"><a class="subbCat" target="_self" href="#test3">Verifying</a></li>
 		       <li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/config">Configuration</a></li><li class="tabPageNavigation_navLstItem__32vGa">
 		       <a class="typo_heading_12 tabPageNavigation_navLnk__3C2pr" target="_self" id="" href="/admin">Administration</a></li><li class="tabPageNavigation_navLstItem__32vGa">
@@ -1151,7 +1151,7 @@ td {
 		  			</div>
 		  		</div>
 		  
-		  		  <section id="test" class="sepNav">
+		  		  <section id="setup-section" class="sepNav">
 		  		  <h1 class="CommandHeader" id="setup" style="margin-top: 3rem;">Setup <a class="CommandLink" href="#setup" title="Direct link to heading">#</a></h1>
 					  <p class="CommandP">Get started setting up Maven's advanced verification system. Below, we have provied detailed explainations on how to setup and use our verification system.</p>
 					  <img class="CommandImg" src="https://cdn.discordapp.com/attachments/718518892296929352/960700160302796870/IMG_3421.gif"></img>
@@ -1195,16 +1195,37 @@ td {
 								<h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Warning</h5>
 							</div>
 							<div class="admonition-content">
-								<p>Make sure that Maven has the <code>Manage Nicknames</code> permission so that it can change nicknames. Make sure the Maven is role near the top of your role list. Maven can only change nicknames of users that don't have a higher or equal role than the highest role Maven has. Maven can not change the name of the server owner, even if it has the highest role. You may recieve a <code>Missing Permissions</code> error in your log channel if the steps provided are not followed.</p>
+								<p>Make sure that Maven has the <code>Manage Nicknames</code> permission so that it can change nicknames. Make sure the Maven is role near the top of your role list. Maven can only change nicknames of users that don't have a higher or equal role than the highest role Maven has. Maven can not change the name of the server owner, even if it has the highest role. You may receive a <code>Missing Permissions</code> error in your log channel if the steps provided are not followed.</p>
 							</div>
 		  				</div>
 				  </section>
 		  
 		  		  <section id="test2" class="sepNav">		  
 		  		  <h1 class="CommandHeader" id="verify-requirements">Verification Requirements <a class="CommandLink" href="#verify-requirements" title="Direct link to heading">#</a></h1>
-		  		  <img class="CommandImg" src="https://cdn.discordapp.com/attachments/718518892296929352/960698312900612166/IMG_3418.gif"></img>
+		  		  <p class="CommandP">Maven is able to grant roles to verified members. Users are able set specific conditions, to grant roles to members. This feature allows users to give verified members access to the server or private channels. By adding additional conditions, the verified member will need to meet those requirements in addition to being verified, to gain access.</p>
+		  		  <p class="CommandP">To add the base verification role, follow these simple steps below:</p>
+					<div style="margin-left:30px;margin-top:2rem;padding:0px;">
+						<p class="CommandP"><strong>1. </strong>To get started with adding a base verification role, use the slash command <code>/verificationrole</code>.</p>
+						<p class="CommandP"><strong>2. </strong>Fill out the <code>role</code> field, by picking a verification role. This is the role Maven will add to members that verify, but do not meet any requirements. Hit <code>send</code> to post the message & add a base verification role!</p>
+					</div>				
+		  		  <p class="CommandP">Maven will now grant this role to everyone that has completed verification. Verification Requirements come with a lot more features. Keep reading to learn how to set requirements. These requirements include: player platform & number of games played.</p>
+					  
+				  <img class="CommandImg" style="margin-top: 1.5rem;margin-bottom: 1rem;" src="https://cdn.discordapp.com/attachments/718518892296929352/960698312900612166/IMG_3418.gif"></img>
 				  
-		  			<p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p><p class="CommandP">HHHHHH</p>		  
+					  <table>			
+						<thead>
+							<tr><th>Config</th><th>Options</th><th>Description</th></tr>
+						
+							<tbody>
+								<tr><td>Enabled</td><td> On / Off</td><td>Enables verification in your server. If you want to use verification, a channel must be configured. This is the slash command <code>/verificationmessage</code>.</td></tr>
+								<tr><td>Log Channel</td><td>#channel</td><td>Select a channel where Maven should log all verification, requirement, and error events. This is the slash command <code>/setlogchannel</code>.</td></tr>
+								<tr><td>Nickname Whitelist</td><td>@role(s)</td><td>Maven will not change nicknames of users having at least one of the whitelisted roles. This is the slash command <code>/nicknamewhitelistroles add</code>.</td></tr>
+								<tr><td>Verification Role</td><td>@role</td><td>Maven will give a user this role once they complete the verification process. This is the slash command <code>/verificationrole</code>.</td></tr>									
+						  </tbody>
+						
+						</thead>
+					</table>
+	  		  
 		  		</section>
 		  
 		  		  <section id="test3" class="sepNav">		  
