@@ -1200,7 +1200,7 @@ td {
 		  				</div>
 				  </section>
 		  
-		  		  <section id="test2" class="sepNav">		  
+		  		  <section id="verify-requirements-section" class="sepNav">		  
 		  		  <h1 class="CommandHeader" id="verify-requirements">Verification Requirements <a class="CommandLink" href="#verify-requirements" title="Direct link to heading">#</a></h1>
 		  		  <p class="CommandP">Maven is able to grant roles to verified members. Users are able set specific conditions, to grant roles to members. This feature allows users to give verified members access to the server or private channels. By adding additional conditions, the verified member will need to meet those requirements in addition to being verified, to gain access.</p>
 		  		  <p class="CommandP">To add the base verification role, follow these simple steps below:</p>
@@ -1208,23 +1208,24 @@ td {
 						<p class="CommandP"><strong>1. </strong>To get started with adding a base verification role, use the slash command <code>/verificationrole</code>.</p>
 						<p class="CommandP"><strong>2. </strong>Fill out the <code>role</code> field, by picking a verification role. This is the role Maven will add to members that verify, but do not meet any requirements. Hit <code>send</code> to post the message & add a base verification role!</p>
 					</div>				
-		  		  <p class="CommandP" style="margin-top: 1.5rem;margin-bottom: 1.5rem;">Maven will now grant this role to everyone that has completed verification. Verification Requirements come with a lot more features. Keep reading to learn how to set requirements. These requirements include: player platform & number of games played.</p>
-		  		  <p class="CommandP">Maven is able to grant roles to verified members. Users are able set specific conditions, to grant roles to members. This feature allows users to give verified members access to the server or private channels. By adding additional conditions, the verified member will need to meet those requirements in addition to being verified, to gain access.</p>
-		  		  <p class="CommandP">To add the base verification role, follow these simple steps below:</p>
-					<div style="margin-left:30px;margin-top:2rem;padding:0px;">
+		  		  <p class="CommandP" style="margin-top: 1.5rem;margin-bottom: 1rem;">Maven will now grant this role to everyone that has completed verification. Verification Requirements come with a lot more features. Keep reading to learn how to set requirements. These requirements include: player platform & number of games played.</p>
+					  
+				  <h2 class="Command2Header" style="margin-top:0px;" id="setup-requirements">Setup Requirements <a class="Command2Link" href="#setup-requirements" title="Direct link to subheading">#</a></h2>	  
+		  		  <p class="CommandP">Maven is able to limit roles for users based on certain configurable requirements. Maven adds the roles, to users that have verified and met a requirement.</p>
+		  		  <p class="CommandP">To add the verification requirements, follow these simple steps below:</p>
+					<div style="margin-left:30px;margin-top:2rem;padding:0px;margin-bottom:1rem;">
 						<p class="CommandP"><strong>1. </strong>To get started with adding verification requirments, use the slash command <code>/verificationconfigs set</code>.</p>
 						<p class="CommandP"><strong>2. </strong>Fill out the <code>platform</code>, <code>games-played</code>, and <code>role</code>, fields, these are all optional feilds. Hit <code>send</code> to post the message & add a verification requirement!</p>
 					</div>	
-	  				<div class="admonition admonition-info alert alert--info">
+	  				<div style="margin-top: 1.5rem;" class="admonition admonition-info alert alert--info">
 							<div class="admonition-heading">
 								<h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,14.33333c-39.49552,0 -71.66667,32.17115 -71.66667,71.66667c0,39.49552 32.17115,71.66667 71.66667,71.66667c39.49552,0 71.66667,-32.17115 71.66667,-71.66667c0,-39.49552 -32.17115,-71.66667 -71.66667,-71.66667zM86,28.66667c31.74921,0 57.33333,25.58412 57.33333,57.33333c0,31.74921 -25.58412,57.33333 -57.33333,57.33333c-31.74921,0 -57.33333,-25.58412 -57.33333,-57.33333c0,-31.74921 25.58412,-57.33333 57.33333,-57.33333zM78.83333,50.16667v14.33333h14.33333v-14.33333zM78.83333,78.83333v43h14.33333v-43z"></path></g></g></svg></span>Information</h5>
 							</div>
 							<div class="admonition-content">
-								<p>Note, if you do not set the field <code>role</code>, the requirement will become the base verification requirement. This means, in order to verify and recieve the <code>base verification role</code> a user will need to meet that base verification reqirement.</p>
+								<p>Note, if you do not set the field <code>role</code>, the requirement will become the base verification requirement. This means, in order to verify and recieve the <strong>base verification role</strong> a user will need to meet that base verification reqirement.</p>
 							</div>
 		  				</div>					  
-				  <img class="CommandImg" style="margin-bottom: 1rem;" src="https://cdn.discordapp.com/attachments/718518892296929352/960698312900612166/IMG_3418.gif"></img>
-				  <h2 class="Command2Header" id="requirements">Setup Requirements <a class="Command2Link" href="#setup-requirements" title="Direct link to subheading">#</a></h2>
+				  <img class="CommandImg" style="margin-bottom: 1rem;margin-top:0px!important;" src="https://cdn.discordapp.com/attachments/718518892296929352/960698312900612166/IMG_3418.gif"></img>
 		  			
 				  <h2 class="Command2Header" id="requirements">Requirements <a class="Command2Link" href="#requirements" title="Direct link to subheading">#</a></h2>
 		  
@@ -1795,13 +1796,13 @@ a {
 	@media (max-width: 400px) {		      
 		table td, table th {
     			padding: 0.2rem!important;
-			font-size: 14px!important;
+			font-size: 13px!important;
 		}	
 	}
 	@media (max-width: 380px) {		      
 		table td, table th {
     			padding: 0.2rem!important;
-			font-size: 12px!important;
+			font-size: 11px!important;
 		}	
 	}				      
 		      
