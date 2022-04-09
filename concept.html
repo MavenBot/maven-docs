@@ -741,7 +741,7 @@ nav ul li a.active {
         text-transform: none;           
 	font-family:apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
         }
-	.Command2Header:hover>.term2Link {
+	.Command2Header:hover>.Command2Link {
 	opacity: 1;
 	cursor: pointer;
 	transition:opacity .5s;	      
@@ -1181,10 +1181,9 @@ td {
 							<tr><th>Config</th><th>Options</th><th>Description</th></tr>
 						
 							<tbody>
-								<tr><td>Enabled</td><td> On / Off</td><td>Enables verification in your server. If you want to use verification, a channel must be configured. This is the slash command <code>/verificationmessage</code>.</td></tr>
-								<tr><td>Log Channel</td><td>#channel</td><td>Select a channel where Maven should log all verification, requirement, and error events. This is the slash command <code>/setlogchannel</code>.</td></tr>
-								<tr><td>Nickname Whitelist</td><td>@role(s)</td><td>Maven will not change nicknames of users having at least one of the whitelisted roles. This is the slash command <code>/nicknamewhitelistroles add</code>.</td></tr>
-								<tr><td>Verification Role</td><td>@role</td><td>Maven will give a user this role once they complete the verification process. This is the slash command <code>/verificationrole</code>.</td></tr>									
+								<tr><td>Games Played</td><td>Number</td><td>Enables verification in your server. If you want to use verification, a channel must be configured. This is the slash command <code>/verificationmessage</code>.</td></tr>
+								<tr><td>Platform</td><td>PC / Console / Mobile</td><td>Select a channel where Maven should log all verification, requirement, and error events. This is the slash command <code>/setlogchannel</code>.</td></tr>
+								<tr><td>Role</td><td>@role</td><td>Maven will not change nicknames of users having at least one of the whitelisted roles. This is the slash command <code>/nicknamewhitelistroles add</code>.</td></tr>
 						  </tbody>
 						
 						</thead>
@@ -1208,13 +1207,14 @@ td {
 						<p class="CommandP"><strong>1. </strong>To get started with adding a base verification role, use the slash command <code>/verificationrole</code>.</p>
 						<p class="CommandP"><strong>2. </strong>Fill out the <code>role</code> field, by picking a verification role. This is the role Maven will add to members that verify, but do not meet any requirements. Hit <code>send</code> to post the message & add a base verification role!</p>
 					</div>				
-		  		  <p class="CommandP">Maven will now grant this role to everyone that has completed verification. Verification Requirements come with a lot more features. Keep reading to learn how to set requirements. These requirements include: player platform & number of games played.</p>
+		  		  <p class="CommandP" style="margin-top: 1.5rem;margin-bottom: 1.5rem;">Maven will now grant this role to everyone that has completed verification. Verification Requirements come with a lot more features. Keep reading to learn how to set requirements. These requirements include: player platform & number of games played.</p>
 					  
-				  <img class="CommandImg" style="margin-top: 1.5rem;margin-bottom: 1rem;" src="https://cdn.discordapp.com/attachments/718518892296929352/960698312900612166/IMG_3418.gif"></img>
-				  
+				  <img class="CommandImg" style="margin-bottom: 1rem;" src="https://cdn.discordapp.com/attachments/718518892296929352/960698312900612166/IMG_3418.gif"></img>
+		  
+				  <h2 class="Command2Header" id="requirements">Requirements <a class="Command2Link" href="#requirements" title="Direct link to subheading">#</a></h2>
 					  <table>			
 						<thead>
-							<tr><th>Config</th><th>Options</th><th>Description</th></tr>
+							<tr><th>Requirements</th><th>Options</th><th>Description</th></tr>
 						
 							<tbody>
 								<tr><td>Enabled</td><td> On / Off</td><td>Enables verification in your server. If you want to use verification, a channel must be configured. This is the slash command <code>/verificationmessage</code>.</td></tr>
