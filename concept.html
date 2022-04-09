@@ -999,7 +999,12 @@ tr {
 table td {
     color: #fff;
 }
-
+a.typo_heading_12.tabPageNavigation_navLnk__3C2pr {
+    cursor: pointer!important;
+}
+a.subbCat {
+    cursor: pointer!important;
+}	
 table td, table th {
     border: 1px solid rgba(255, 255, 255, 0.8)!important;
     padding: 0.75rem;
@@ -1209,7 +1214,7 @@ td {
 						<p class="CommandP"><strong>1. </strong>To get started with adding a base verification role, use the slash command <code>/verificationrole</code>.</p>
 						<p class="CommandP"><strong>2. </strong>Fill out the <code>role</code> field, by picking a verification role. This is the role Maven will add to members that verify, but do not meet any requirements. Hit <code>send</code> to post the message & add a base verification role!</p>
 					</div>				
-		  		  <p class="CommandP" style="margin-top: 1.5rem;margin-bottom: 1rem;">Maven will now grant this role to everyone that has completed verification. Verification Requirements come with a lot more features. Keep reading to learn how to set requirements. These requirements include: player platform & number of games played.</p>
+		  		  <p class="CommandP" style="margin-top: 1.5rem;margin-bottom: 2rem;">Maven will now grant this role to everyone that has completed verification. Verification Requirements come with a lot more features. Keep reading to learn how to set requirements. These requirements include: player platform & number of games played.</p>
 		  		<!--Split-->
 		  
 				  <h2 class="Command2Header" style="margin-top:0px;" id="setup-requirements">Setup Requirements <a class="Command2Link" href="#setup-requirements" title="Direct link to subheading">#</a></h2>	  
@@ -1235,13 +1240,18 @@ td {
 							<tr><th>Requirements</th><th>Options</th><th>Description</th></tr>
 						
 							<tbody>
-								<tr><td>Games Played</td><td>Number</td><td>Enables verification in your server. If you want to use verification, a channel must be configured. This is the slash command <code>/verificationmessage</code>.</td></tr>
-								<tr><td>Platform</td><td>PC / Console / Mobile</td><td>Select a channel where Maven should log all verification, requirement, and error events. This is the slash command <code>/setlogchannel</code>.</td></tr>
-								<tr><td>Role</td><td>@role</td><td>Maven will not change nicknames of users having at least one of the whitelisted roles. This is the slash command <code>/nicknamewhitelistroles add</code>.</td></tr>								
+								<tr><td>Games Played</td><td>Number</td><td>This configures the amount of games a user has to play. This is the slash command <code>/verificationconfigs set games-played:</code>.</td></tr>
+								<tr><td>Platform</td><td>PC / Console / Mobile</td><td>This configures the platform a user must be verified on. This is the slash command <code>/verificationconfigs set platform:</code>.</td></tr>
+								<tr><td>Role</td><td>@role</td><td>This configures the role Maven will give to a user if they meet a requirement. This is the slash command <code>/verificationconfigs set role:</code>.</td></tr>								
 						  </tbody>
 						
 						</thead>
 					</table>
+	  				<p class="CommandP">To remove a verification requirement, follow these simple steps below:</p>
+					<div style="margin-left:30px;margin-top:2rem;padding:0px;margin-bottom:1rem;">
+						<p class="CommandP"><strong>1. </strong>To get started with removing a verification requirment, use the slash command <code>/verificationconfigs remove</code>.</p>
+						<p class="CommandP"><strong>2. </strong>Fill out the <code>role</code> field, this is the role that is associated with the requirement you want to remove.. Hit <code>send</code> to post the message & remove a verification requirement!</p>
+					</div>	
 	  		  	<!--Split-->
 	  
 		  		</section>
