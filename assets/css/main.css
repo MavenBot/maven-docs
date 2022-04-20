@@ -10,6 +10,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	display: block;
 }
 
+header .navbar-sticky {
+    top: 0;
+    position: fixed!important;
+    background: rgb(23, 24, 27)!important;
+    background-color: var(--header-bg-color);
+    -webkit-box-shadow: 0 0 25px rgb(0 0 0 / 25%);
+    box-shadow: 0 0 25px rgb(0 0 0 / 25%);
+    width: 100%;
+}
+.navbar {
+    transition: all .5s ease-in-out!important;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;	
+}
+@media (max-width: 1199px) {
+    .navbar {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;	
+    }    
+}
+
 html {
     overflow-x: hidden;
 }
