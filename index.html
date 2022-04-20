@@ -101,7 +101,7 @@
     background-color: white;
 }
             .navbar {
-    padding: 0.7rem 0rem 0px 124px!important;
+    padding: 0.7rem 0rem 0.7rem 124px!important;
             }
             
             .hoRgHK {
@@ -365,7 +365,7 @@ g {
     <header style="background: rgb(23, 24, 27);">
       
         <!-- Navbar -->
-        <nav data-aos="zoom-out" data-aos-delay="800" class="navbar navbar-expand">
+        <nav data-aos="zoom-out" data-aos-delay="800" id="stickyNav" class="navbar navbar-expand">
             <div class="container header">
                 <!-- Navbar Items -->
                 <ul class="navbar-nav items ml-auto">
@@ -416,12 +416,10 @@ g {
                <div class="sc-1659snh-0 crojIh" style="background: rgb(23, 24, 27);">
       
             <div class="fz1i6o-1 Row hoRgHK">
-		    			 <div class="scroll-element js-scroll slide-left">
 
                 <div class="l5d1ut-1 fMzGxU">
                     <head-docs>Read the Maven Docs</head-docs>
             <doc-yhe>Welcome to the new Maven Docs navigation page! Take a look around, admire, learn, and have fun.</doc-yhe>
-            </div>
                            </div>
 		       </div>
               </div>
@@ -581,9 +579,7 @@ g {
 
               </style>
               <div data-v-9f898758="" class="section adr-1" style="width: 84%; max-width: 980px;">
-		      			 <div class="scroll-element js-scroll fade-in-bottom">
                           <h2 data-v-9f898758="">Maven Docs</h2>
-		      </div>
                         <div data-v-9f898758="" class="staff-credits">
 			 
                                     <a href="/scrims">
@@ -947,6 +943,21 @@ const handleScrollAnimation = () => {
 window.addEventListener("scroll", () => { 
   handleScrollAnimation();
 });
+<script>
+//Get the button
+var navsticky = document.getElementById("stickyNav");
+
+// When the user scrolls down 3px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 3 || document.documentElement.scrollTop > 3) {
+    navsticky.classList.add("navbar-sticky");
+  } else {
+    navsticky.classList.remove("navbar-sticky");
+  }
+}	
+</script>					    
             </script>    
              <!-- END OF PAGE -->
         <!-- ==============================================
