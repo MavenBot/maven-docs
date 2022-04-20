@@ -101,7 +101,7 @@
     background-color: white;
 }
             .navbar {
-    padding: 0.7rem 0rem 0px 124px!important;
+    padding: 0.7rem 0rem 0.7rem 124px!important;
             }
 .container {
     width: 100%;
@@ -215,7 +215,7 @@
     <header>
       
         <!-- Navbar -->
-        <nav data-aos="zoom-out" data-aos-delay="800" class="navbar navbar-expand">
+        <nav data-aos="zoom-out" data-aos-delay="800" id="stickyNav" class="navbar navbar-expand">
             <div class="container header">
                 <!-- Navbar Items -->
                 <ul class="navbar-nav items ml-auto">
@@ -517,7 +517,21 @@ a {
             </div>
         </div>
   </div>
-            
+<script>
+//Get the button
+var navsticky = document.getElementById("stickyNav");
+
+// When the user scrolls down 3px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 3 || document.documentElement.scrollTop > 3) {
+    navsticky.classList.add("navbar-sticky");
+  } else {
+    navsticky.classList.remove("navbar-sticky");
+  }
+}	
+</script>
              <!-- END OF PAGE -->
         <!-- ==============================================
         Vendor Scripts
