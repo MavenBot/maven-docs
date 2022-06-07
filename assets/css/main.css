@@ -13,7 +13,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 header .navbar-sticky {
     top: 0;
     position: fixed!important;
-    background: rgb(23, 24, 27)!important;
+    background: rgb(23, 24, 27, 0.25)!important;
+    backdrop-filter: blur(46px)!important;
+    -webkit-backdrop-filter: blur(46px)!important;	
     background-color: var(--header-bg-color);
     -webkit-box-shadow: 0 0 25px rgb(0 0 0 / 25%);
     box-shadow: 0 0 25px rgb(0 0 0 / 25%);
@@ -24,10 +26,25 @@ header .navbar-sticky {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;	
 }
+.modal-backdrop.show {
+    opacity: 1!important;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(46px)!important;
+    -webkit-backdrop-filter: blur(46px)!important;		
+    background-color: transparent!important;
+}
 @media (max-width: 1199px) {
     .navbar {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;	
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;	
     }    
 }
 
