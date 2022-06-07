@@ -205,7 +205,7 @@ figure {
 }
 
 .buttona {
-    cursor: pointer;
+    cursor: pointer!important;
     text-decoration: none;
 }
 .hzBTNA {
